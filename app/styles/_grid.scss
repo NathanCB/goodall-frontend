@@ -1,0 +1,15 @@
+.grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &-item {
+    padding: $m-gutter;
+    margin: $m-gutter / 2;
+    color: $c-black;
+    border: 0.05rem solid $c-black;
+    background: $c-cream;
+    box-shadow: $bs-1;
+    font-size: 2rem;
+  }
+}

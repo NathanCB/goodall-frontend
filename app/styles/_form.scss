@@ -1,0 +1,12 @@
+.form {
+
+  &__input {
+    padding: $m-gutter / 2;
+    width: 20rem;
+    border: 0;
+    border-radius: $br-1;
+    outline: none;
+    color: $c-black;
+    background: $c-cream;
+  }
+}

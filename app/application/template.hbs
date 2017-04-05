@@ -1,0 +1,17 @@
+<div class="section top-nav">
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar__group">
+        <h1 class="logo">Goodall</h1>
+        {{!-- TODO add action to form --}}
+        <form class="form" action="submit" method="post">
+          <div class="form__block">
+            {{input type="text" placeholder="Where are you?" class="form__input"}}
+            <span><button type="submit" name="Go" class="button">Go!</button></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{outlet}}

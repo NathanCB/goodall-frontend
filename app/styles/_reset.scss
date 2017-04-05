@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $c-blue;
+  background: $c-cream;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  align-self: center;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

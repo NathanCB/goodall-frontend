@@ -1,0 +1,20 @@
+.top-nav {
+  background: $c-yellow;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.logo {
+  margin-bottom: $m-gutter;
+  font-size: 4rem;
+  text-align: center;
+}
