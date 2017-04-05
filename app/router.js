@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('register');
   this.route('new');
   this.route('archive');
+  this.route('detail');
 });
 
 export default Router;

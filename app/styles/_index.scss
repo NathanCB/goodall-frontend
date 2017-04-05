@@ -1,3 +1,14 @@
 .index {
   padding-top: $m-gutter * 2;
+
+  &-grid {
+
+
+    &__item {
+      display: inline-block;
+      margin: $m-gutter / 4;
+      // background: $c-white;
+      // box-shadow: $bs-1;
+    }
+  }
 }
