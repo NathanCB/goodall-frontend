@@ -1,8 +1,8 @@
-$c-black: rgba(12, 12, 12, 1);
-$c-blue: rgba(0, 141, 213, 1);
-$c-cream: rgba(252,255,244,1);
-$c-green: rgba(127, 239, 189, 1);
-$c-yellow: rgba(233, 215, 88, 1);
+$c-black: rgba(10, 18, 42, 1);
+$c-green: rgba(105, 143, 63, 1);
+$c-white: rgba(251, 250, 248, 1);
+$c-beige: rgba(231, 222, 205, 1);
+$c-burgundy: rgba(128, 78, 73, 1);
 
 $m-gutter: 1rem;
 
@@ -12,8 +12,8 @@ $bs-1: 2px 2px 1px -0.5px $c-black;
 
 @import 'reset';
 @import 'layout';
-@import 'top-nav';
 @import 'form';
 @import 'event-list';
 @import 'grid';
 @import 'button';
+@import 'sidebar';
