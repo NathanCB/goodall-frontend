@@ -1,9 +1,6 @@
 .grid {
   display: flex;
-  margin: -$m-gutter;
-
-  &-item {
-  }
+  flex-wrap: wrap;
 }
 
 .content-right {
