@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('login');
   this.route('register');
   this.route('new');
+  this.route('archive');
 });
 
 export default Router;
