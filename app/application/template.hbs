@@ -1,21 +1,16 @@
-<div class="section">
-  <div class="grid">
-    <div class="grid__item">
-      <div class="sidebar">
-        <div class="sidebar-grid">
-          {{#link-to "index" class="logo"}}Goodall{{/link-to}}
-          <p>{{#link-to "login"}}Login{{/link-to}}</p>
-          <p>{{#link-to "new"}}Create Event{{/link-to}}</p>
-          <p>{{#link-to "index"}}Spaces{{/link-to}}</p>
-          <p>{{#link-to "archive"}}Archive{{/link-to}}</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid__item content-right">
-      {{outlet}}
+<div class="page">
+  <div class="page__sidebar sidebar">
+    <div class="sidebar-grid">
+      {{#link-to "index" class="logo"}}Goodall{{/link-to}}
+      <p>{{#link-to "login"}}Login{{/link-to}}</p>
+      <p>{{#link-to "new"}}Create Event{{/link-to}}</p>
+      <p>{{#link-to "index"}}Spaces{{/link-to}}</p>
+      <p>{{#link-to "archive"}}Archive{{/link-to}}</p>
     </div>
   </div>
+  <div class="page__content">{{outlet}}</div>
 </div>
+
 {{!-- TODO add action to form --}}
 {{!-- <form class="form" action="submit" method="post">
 <div class="form__block">

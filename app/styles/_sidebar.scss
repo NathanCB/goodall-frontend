@@ -1,6 +1,22 @@
-.sidebar {
-  width: 10rem;
+.page {
+  display: flex;
   height: 100vh;
+
+  &__sidbar {
+    overflow-y: auto;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
   padding: $m-gutter;
   background: $c-black;
 }
