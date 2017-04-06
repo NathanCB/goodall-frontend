@@ -27,11 +27,21 @@ export default Ember.Component.extend({
     'sorts',
   ],
 
+  fontSizes: [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5'
+  ],
+
   init() {
     this._super(...arguments);
 
     const randomFont = this.fonts[Math.floor(Math.random()*this.fonts.length)];
+    const randomFontSize = this.fontSizes[Math.floor(Math.random()*this.fontSizes.length)];
 
     this.set('font', randomFont);
+    this.set('fontSize', randomFontSize);
   }
 });
