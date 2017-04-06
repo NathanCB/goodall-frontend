@@ -10,7 +10,6 @@ export default Ember.Controller.extend({
         .then((result) => {
           this.set('lat', result.results[0].geometry.location.lat);
           this.set('lng', result.results[0].geometry.location.lng);
-          debugger;
         })
     }
   }
