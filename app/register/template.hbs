@@ -1,12 +1,13 @@
 <h2>Create an account </h2>
 
-<form action="">
-  <p>{{input type="text" placeholder="Username" class="form__input"}}</p>
-  <p>{{input type="text" placeholder="Email" class="form__input"}}</p>
-  <p>{{input type="text" placeholder="Password" class="form__input"}}</p>
-  <p>{{input type="text" placeholder="Verify Password" class="form__input"}}</p>
+{{#with (changeset model validator) as |changeset|}}
+<form class="form" action="createUser" method="post" {{action "createUser" changeset on="submit"}}>
+  <p>{{input type="text" placeholder="Username" class="form__input" value=changeset.username}}</p>
+  <p>{{input type="text" placeholder="Email" class="form__input" value=changeset.email}}</p>
+  <p>{{input type="password" placeholder="Password" class="form__input" value=changeset.password}}</p>
+  <p>{{input type="password" placeholder="Verify Password" class="form__input" value=changeset.passwordConfirmation}}</p>
   {{#link-to "index"}}Back{{/link-to}}
   <button type="submit" name="Go" class="button">Go!</button>
 </form>
-
+{{/with}}
 {{outlet}}

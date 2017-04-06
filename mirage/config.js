@@ -1,10 +1,13 @@
 export default function() {
 
-  this.namespace = '/api';
+  // this.namespace = '/api';
 
-  this.get('/users', (schema, request) => {
-    return schema.authors.all();
-  });
+  this.get('/users');
+  this.post('/users');
+  this.get('/users/:id');
+  this.patch('/users/:id');
+  this.put('/users/:id');
+  this.delete('/users/:id');
 
 
 
