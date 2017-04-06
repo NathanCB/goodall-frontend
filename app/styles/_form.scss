@@ -1,12 +1,17 @@
 .form {
 
+  &__block {
+    text-align: center;
+  }
+
   &__input {
     width: 20rem;
+    margin-bottom: 2rem;
     padding: $m-gutter / 2;
     border: 0;
     border-radius: $br-1;
     outline: none;
-    background: $c-beige;
+    background: $c-white;
     color: $c-black;
   }
 }
