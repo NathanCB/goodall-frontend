@@ -1,0 +1,14 @@
+.card {
+  background: $c-white;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+
+    &__img {
+      height: 2rem;
+    }
+  }
+}

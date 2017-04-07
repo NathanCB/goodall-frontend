@@ -28,7 +28,6 @@ export default Ember.Component.extend({
   ],
 
   fontSizes: [
-    '1',
     '2',
     '3',
     '4',
