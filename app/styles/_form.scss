@@ -1,5 +1,16 @@
 .form {
 
+  &__heading {
+    margin-bottom: $m-gutter;
+    font-size: 2rem;
+  }
+
+  &__sub-heading {
+    display: inline-block;
+    margin-bottom: $m-gutter;
+    font-size: 1rem;
+  }
+
   &__block {
     text-align: center;
   }

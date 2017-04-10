@@ -1,12 +1,22 @@
+<h2 class="form__heading">Login</h2>
+
 <div class="form-container">
-  {{#link-to "register"}}Don't have an account? Sign up here.{{/link-to}}
-  <form action="">
-    <p>{{input type="text" placeholder="Username" class="form__input"}}</p>
-    <p>{{input type="text" placeholder="Email" class="form__input"}}</p>
-    <p>{{input type="text" placeholder="Password" class="form__input"}}</p>
+  {{#link-to "register" class="form__sub-heading"}}Don't have an account? Sign up here.{{/link-to}}
+  {{#with (changeset model validator) as |changeset|}}
+  <form action="authenticate" on "submit">
+    <label for="username">Username</label>
+    <p>{{input id="username" type="text" placeholder="Username" class="form__input" value=username}}</p>
+    <label for="email">Email</label>
+    <p>{{input id="email" type="text" placeholder="Email" class="form__input" value=email}}</p>
+    <label for="password">Password</label>
+    <p>{{input id="password" type="password" placeholder="Password" class="form__input" value=password}}</p>
     {{#link-to "index"}}Back{{/link-to}}
     <button type="submit" name="Go" class="button">Go!</button>
+    {{#if errorMessage}}
+      <p>{{errorMessage}}</p>
+    {{/if}}
   </form>
+  {{/with}}
 </div>
 
 {{outlet}}
