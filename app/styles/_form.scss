@@ -11,13 +11,17 @@
     font-size: 1rem;
   }
 
+  &__field-title {
+    text-align: left;
+  }
+
   &__block {
-    text-align: center;
+    text-align: left;
   }
 
   &__input {
     width: 20rem;
-    margin-bottom: 2rem;
+    margin-bottom: $m-gutter;
     padding: $m-gutter / 2;
     border: 0;
     border-radius: $br-1;

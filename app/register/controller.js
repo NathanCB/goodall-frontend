@@ -2,6 +2,8 @@ import Ember from 'ember';
 import { validatePresence, validateFormat, validateLength, validateConfirmation } from 'ember-changeset-validations/validators'
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service(),
+
   validator: {
     username: [
       validatePresence(true),
@@ -14,6 +16,7 @@ export default Ember.Controller.extend({
     password: [
       validatePresence(true),
     ],
+    passwordConfirmation: validateConfirmation({ on: 'password' }),
   },
 
   actions: {
@@ -21,7 +24,7 @@ export default Ember.Controller.extend({
       await changeset.validate();
 
       if (changeset.get('isInvalid')) {
-        return alert('Invalid fields');
+        return alert('Please enter valid form data');
       }
 
 

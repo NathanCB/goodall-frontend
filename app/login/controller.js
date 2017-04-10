@@ -14,12 +14,23 @@ export default Ember.Controller.extend({
     password: [
       validatePresence(true),
     ],
-    passwordConfirmation: validateConfirmation({ on: 'password' }),
   },
 
-  actions: [
+  actions: {
     async authenticate(changeset) {
       await changeset.validate();
+
+      if (changeset.get('isInvalid')) {
+        return alert('Invalid fields');
+      }
+
+      changeset.save();
+
+      const {username, password} = this.model;
+
+      this.get('session').authenticate('authenticator:token', username, password).catch((reason) => {
+        this.set('errorMessage', reason.error || reason);
+      });
     }
-  ]
+  }
 });
