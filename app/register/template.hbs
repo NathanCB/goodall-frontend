@@ -1,20 +1,13 @@
 <h2 class="form__heading">Create an account </h2>
 
 {{#with (changeset model validator) as |changeset|}}
-<form class="form" action="createUser" method="post" {{action "createUser" changeset on="submit"}}>
+<form class="form" method="post" {{action "createUser" changeset on="submit"}}>
   {{validated-input placeholder="Username" changeset=changeset propertyName="username"}}
   {{validated-input placeholder="Email" changeset=changeset propertyName="email"}}
   {{validated-input placeholder="Password" changeset=changeset propertyName="password" type="password"}}
   {{validated-input placeholder="Confirm Password" changeset=changeset propertyName="passwordConfirmation" type="password"}}
   {{#link-to "index"}}Back{{/link-to}}
   <button type="submit" name="Go" class="button">Go!</button>
-  <ul>
-    {{#each changeset.errors as |errorSet|}}
-      {{#each errorSet.validation as |error|}}
-        <li>{{error}}</li>
-      {{/each}}
-    {{/each}}
-  </ul>
 </form>
 {{/with}}
 {{outlet}}

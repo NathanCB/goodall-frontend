@@ -1,12 +1,18 @@
 <h2 class="form__heading">Create a new event.</h2>
 
-<form action="">
-  <p>{{input type="text" placeholder="Title" class="form__input"}}</p>
-  <p>{{input type="text" placeholder="Location" class="form__input"}}</p>
-  <p>{{input type="text" placeholder="Description" class="form__input"}}</p>
-  <p>{{input type="text" placeholder="Date" class="form__input"}}</p>
+{{#with (changeset model validator) as |changeset|}}
+<form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
+  {{validated-input type="file" placeholder="Event Image" changeset=changeset propertyName="eventImg"}}
+  {{validated-input placeholder="Title"}}
+  {{validated-input type="search" placeholder="Location"}}
+  {{validated-input type="date" placeholder="Date"}}
+  {{validated-input type="time" placeholder="Start Time"}}
+  {{validated-input type="range" placeholder="Duration"}}
+  {{validated-input textarea=true placeholder="Description"}}
+  {{validated-input placeholder="Participating Artist(s)"}}
   {{#link-to "index"}}Back{{/link-to}}
   <button type="submit" name="Go" class="button">Go!</button>
 </form>
+{{/with}}
 
 {{outlet}}
