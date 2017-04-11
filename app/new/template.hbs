@@ -3,11 +3,12 @@
 {{#with (changeset model validator) as |changeset|}}
 <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
   {{file-selector}}
+  {{!-- {{date-picker}} --}}
   {{validated-input placeholder="Title"}}
   {{validated-input type="search" placeholder="Location"}}
   {{validated-input type="date" placeholder="Date"}}
   {{validated-input type="time" placeholder="Start Time"}}
-  {{validated-input type="range" placeholder="Duration"}}
+  {{validated-input placeholder="Duration"}}
   {{validated-input textarea=true placeholder="Description"}}
   {{validated-input placeholder="Participating Artist(s)"}}
   {{#link-to "index"}}Back{{/link-to}}
