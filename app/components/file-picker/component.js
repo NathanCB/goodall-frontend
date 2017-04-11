@@ -11,6 +11,6 @@ export default Ember.Component.extend({
         // Converts from FileList to JS Array
         this.action(Array.from(files));
       });
-    }
+    },
   }
 });

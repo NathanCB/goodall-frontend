@@ -4,6 +4,8 @@ import moment from 'moment';
 
 export default Ember.Controller.extend({
   session: Ember.inject.service(),
+  filesystem: Ember.inject.service(),
+  selectedFiles: [],
 
   validator: {
     eventImg: [
