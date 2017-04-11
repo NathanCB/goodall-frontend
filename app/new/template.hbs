@@ -6,13 +6,13 @@
     <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
       {{file-selector propertyName="eventImg"}}
       {{!-- {{date-picker}} --}}
-      {{validated-input placeholder="Title" propertyName="title"}}
-      {{validated-input type="search" placeholder="Location" propertyName="location"}}
-      {{validated-input type="date" placeholder="Date" propertyName="date"}}
-      {{validated-input type="time" placeholder="Start Time" propertyName="startTime"}}
-      {{validated-input placeholder="Duration" propertyName="duration"}}
-      {{validated-input textarea=true placeholder="Description" propertyName="description"}}
-      {{validated-input placeholder="Participating Artist(s)" propertyName="artists"}}
+      {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
+      {{validated-input type="search" placeholder="Location" changeset=changeset propertyName="location"}}
+      {{validated-input type="date" placeholder="Date" changeset=changeset propertyName="date"}}
+      {{validated-input type="time" placeholder="Start Time" changeset=changeset propertyName="startTime"}}
+      {{validated-input placeholder="Duration" changeset=changeset propertyName="duration"}}
+      {{validated-input textarea=true placeholder="Description" changeset=changeset propertyName="description"}}
+      {{validated-input placeholder="Participating Artist(s)" changeset=changeset propertyName="artists"}}
       <div class="btn__grid">
         {{#link-to "index" class="btn btn-back"}}Back{{/link-to}}
         <button type="submit" name="Go" class="btn btn-go">Submit</button>
