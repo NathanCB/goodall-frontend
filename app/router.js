@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('new');
   this.route('archive');
   this.route('detail');
+  this.route('new-space');
 });
 
 export default Router;

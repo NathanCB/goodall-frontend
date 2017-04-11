@@ -37,5 +37,20 @@ export default Ember.Controller.extend({
       validatePresence(true),
     ],
 
+  },
+
+  actions: {
+    async saveEvent(changeset) {
+      await changeset.validate();
+
+      if (changeset.get('isInvalid')) {
+        return alert('Please enter valid form data');
+      }
+
+      changeset.save();
+
+      const event = this.store.createRecord('event', this.model);
+      event.save();
+    },
   }
 });
