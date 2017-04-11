@@ -2,16 +2,15 @@
   padding-top: $m-gutter * 2;
 
   &-grid {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
 
     &__item {
       display: inline-block;
-      margin: $m-gutter / 4;
+      margin: $m-gutter / 2;
     }
-  }
-
-  &__link {
-    color: $c-yellow;
   }
 }
 

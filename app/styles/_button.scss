@@ -9,7 +9,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: lighten($c-blue, 5%);
+    background-color: darken($c-yellow, 10%);
   }
 
   &:active {
@@ -28,7 +28,7 @@
 
   &-go {
     flex-basis: calc(100% / 3);
-    background: $c-blue;
+    background: $c-yellow;
     color: $c-deep-black;
     // background-image:
     // linear-gradient(

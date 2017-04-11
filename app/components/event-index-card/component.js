@@ -31,7 +31,15 @@ export default Ember.Component.extend({
     '2',
     '3',
     '4',
-    '5'
+    '5',
+  ],
+
+  fontColors: [
+    'green',
+    'yellow',
+    'blue',
+    'red',
+    'pale-white',
   ],
 
   init() {
@@ -39,8 +47,10 @@ export default Ember.Component.extend({
 
     const randomFont = this.fonts[Math.floor(Math.random()*this.fonts.length)];
     const randomFontSize = this.fontSizes[Math.floor(Math.random()*this.fontSizes.length)];
+    const randomFontColor = this.fontColors[Math.floor(Math.random()*this.fontColors.length)];
 
     this.set('font', randomFont);
     this.set('fontSize', randomFontSize);
+    this.set('fontColor', randomFontColor);
   }
 });
