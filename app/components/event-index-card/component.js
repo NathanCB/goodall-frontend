@@ -36,6 +36,7 @@ export default Ember.Component.extend({
   fontColors: [
     'green',
     'yellow',
+    'blue',
     'red',
     'pale-white',
   ],
