@@ -24,7 +24,7 @@
   &__input {
     width: 100%;
     margin-bottom: $m-gutter;
-    padding: $m-gutter;
+    padding: $m-gutter / 2;
     border: 0;
     border-radius: $br-1;
     outline: none;
@@ -41,6 +41,7 @@
   border-radius: 5px;
   background: $c-pale-white;
   color: $c-black;
+  text-align: center;
 }
 
 .daterangepicker-input {

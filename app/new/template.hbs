@@ -1,21 +1,25 @@
-<h2 class="form__heading">Create a new event.</h2>
+<div class="section">
+  <div class="container">
+    <h2 class="form__heading">Create a new event.</h2>
 
-{{#with (changeset model validator) as |changeset|}}
-<form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
-  {{file-selector}}
-  {{!-- {{date-picker}} --}}
-  {{validated-input placeholder="Title"}}
-  {{validated-input type="search" placeholder="Location"}}
-  {{validated-input type="date" placeholder="Date"}}
-  {{validated-input type="time" placeholder="Start Time"}}
-  {{validated-input placeholder="Duration"}}
-  {{validated-input textarea=true placeholder="Description"}}
-  {{validated-input placeholder="Participating Artist(s)"}}
-  <div class="button__grid">
-    {{#link-to "index" class="button button-back"}}Back{{/link-to}}
-    <button type="submit" name="Go" class="button button-go">Go!</button>
+    {{#with (changeset model validator) as |changeset|}}
+    <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
+      {{file-selector}}
+      {{!-- {{date-picker}} --}}
+      {{validated-input placeholder="Title"}}
+      {{validated-input type="search" placeholder="Location"}}
+      {{validated-input type="date" placeholder="Date"}}
+      {{validated-input type="time" placeholder="Start Time"}}
+      {{validated-input placeholder="Duration"}}
+      {{validated-input textarea=true placeholder="Description"}}
+      {{validated-input placeholder="Participating Artist(s)"}}
+      <div class="button__grid">
+        {{#link-to "index" class="button button-back"}}Back{{/link-to}}
+        <button type="submit" name="Go" class="button button-go">Go!</button>
+      </div>
+    </form>
+    {{/with}}
   </div>
-</form>
-{{/with}}
+</div>
 
 {{outlet}}
