@@ -53,5 +53,22 @@ export default Ember.Controller.extend({
       const event = this.store.createRecord('event', this.model);
       event.save();
     },
+
+    upload(file) {
+      const fetch = this.get('filesystem.fetch');
+
+      fetch('https://arcane-stream-63735.herokuapp.com/upload', {
+          method: 'POST',
+          headers: {
+            accept: 'application/json',
+          },
+          body: { 'profile-image': file[0] },
+        }).then(res => res.json())
+        .then((data) => {
+          const upload = this.store.pushPayload(data);
+
+					this.store.peekAll('upload');
+        });
+    },
   },
 });
