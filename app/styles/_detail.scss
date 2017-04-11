@@ -1,14 +1,42 @@
 .card {
-  background: $c-pale-white;
+  display: flex;
+  justify-content: center;
+  color: $c-pale-white;
 
   &-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    object-fit: cover;
+    width: 40rem;
 
     &__img {
-      height: 2rem;
+      position: relative;
+      width: 40rem;
+      height: 20rem;
+      overflow: hidden;
+    }
+
+    &__block {
+      padding: $m-gutter;
     }
   }
+
+  &-block {
+    padding: $m-gutter;
+
+    &__grid {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__heading {
+      font-size: 2rem;
+      text-align: left;
+    }
+
+    &__text {
+      text-align: left;
+    }
+  }
+}
+
+.img-center {
+  width: 100%;
 }
