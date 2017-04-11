@@ -3,6 +3,7 @@
   &__heading {
     margin-bottom: $m-gutter;
     color: $c-yellow;
+    font-family: $f-3;
     font-size: 2rem;
   }
 
@@ -41,6 +42,7 @@
   border-radius: 5px;
   background: $c-pale-white;
   color: $c-black;
+  font-family: $f-3;
 }
 
 .daterangepicker-input {

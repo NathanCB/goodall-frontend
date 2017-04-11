@@ -1,3 +1,7 @@
 .error-msg {
+  color: $c-yellow;
 
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
 }

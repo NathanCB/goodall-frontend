@@ -4,12 +4,11 @@ export default Ember.Component.extend({
   tagName: '',
 
   fonts: [
-    'source',
+    // 'source',
     'vt',
     'quicksand',
     'raleway',
     'lora',
-    'muli',
     'inconsolata',
     'catamaran',
     'crimson',
@@ -37,7 +36,6 @@ export default Ember.Component.extend({
   fontColors: [
     'green',
     'yellow',
-    'blue',
     'red',
     'pale-white',
   ],
