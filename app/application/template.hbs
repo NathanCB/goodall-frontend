@@ -1,4 +1,40 @@
-<div class="page">
+{{#burger-menu as |burger|}}
+  {{#burger.menu itemTagName="li" as |menu|}}
+    <h1 class="bm-menu-heading"></h1>
+    <ul>
+      {{#menu.item}}
+        {{#link-to 'index'}}<img src="../photos/DIY Logo.png" class="bm-menu-logo" alt="logo">{{/link-to}}
+      {{/menu.item}}
+
+      {{#menu.item}}
+        {{#link-to 'new'}}Create Event{{/link-to}}
+      {{/menu.item}}
+
+      {{#menu.item}}
+        {{#link-to 'index'}}Spaces{{/link-to}}
+      {{/menu.item}}
+
+      {{#menu.item}}
+        {{#link-to 'login'}}Login{{/link-to}}
+      {{/menu.item}}
+    </ul>
+  {{/burger.menu}}
+
+  {{#burger.outlet}}
+    <button {{action burger.state.actions.toggle}}>{{fa-icon "bars" class="burger__bars"}}</button> {{outlet}}
+  {{/burger.outlet}}
+{{/burger-menu}}
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="page">
   <div class="page__sidebar sidebar">
     <div class="sidebar-grid">
       <div class="sidebar-grid__item item-center">
@@ -10,11 +46,11 @@
           <li class="sidebar-list__item">{{#link-to "index"}}Spaces{{/link-to}}</li>
           <li class="sidebar-list__item">{{#link-to "login"}}Login{{/link-to}}</li>
           {{!-- <li class="sidebar-list__item">{{#link-to "archive"}}Archive{{/link-to}}</li> --}}
-        </ul>
+{{!-- </ul>
       </div>
     </div>
   </div>
   <div class="page__content">
     {{outlet}}
   </div>
-</div>
+</div> --}}
