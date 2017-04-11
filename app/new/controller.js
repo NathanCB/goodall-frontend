@@ -9,6 +9,33 @@ export default Ember.Controller.extend({
       validatePresence(true)
     ],
 
+    title: [
+      validatePresence(true),
+    ],
+
+    location: [
+      validatePresence(true),
+    ],
+
+    date: [
+      validatePresence(true),
+    ],
+
+    startTime: [
+      validatePresence(true),
+    ],
+
+    duration: [
+      validatePresence(true),
+    ],
+
+    description: [
+      validatePresence(true),
+    ],
+
+    artists: [
+      validatePresence(true),
+    ],
 
   }
 });
