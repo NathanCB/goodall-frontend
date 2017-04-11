@@ -2,7 +2,7 @@
 
 {{#with (changeset model validator) as |changeset|}}
 <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
-  {{validated-input type="file" placeholder="Event Image" changeset=changeset propertyName="eventImg"}}
+  {{file-selector}}
   {{validated-input placeholder="Title"}}
   {{validated-input type="search" placeholder="Location"}}
   {{validated-input type="date" placeholder="Date"}}

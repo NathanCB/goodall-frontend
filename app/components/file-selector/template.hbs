@@ -1,0 +1,10 @@
+<p>
+  {{x-file-input name="files" multiple=true action=(action "uploadPhoto") accept="image/png,image/jpg" class="file-uploader" alt="Event Photo"}}
+
+  {{#if (get changeset.error propertyName)}}
+   {{#each (get (get changeset.error propertyName) 'validation') as |error|}}
+     <br>
+     {{error}}
+   {{/each}}
+  {{/if}}
+</p>

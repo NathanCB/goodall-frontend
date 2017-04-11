@@ -20,7 +20,7 @@
   }
 
   &__input {
-    width: 20rem;
+    width: 100%;
     margin-bottom: $m-gutter;
     padding: $m-gutter / 2;
     border: 0;
@@ -29,4 +29,13 @@
     background: $c-white;
     color: $c-black;
   }
+}
+
+.file-uploader {
+  display: block;
+  margin-bottom: $m-gutter;
+  padding: 10px;
+  border-radius: 5px;
+  background: $c-white;
+  color: $c-black;
 }
