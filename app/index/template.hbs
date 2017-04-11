@@ -1,10 +1,11 @@
 <div class="section index">
   <div class="container">
+    <h1 class="index-logo">goodall</h1>
     {{!-- TODO add action to form --}}
     <form class="form" action="searchLocation" method="post" {{action "searchLocation" search on="submit"}}>
       <div class="form__block">
         {{input type="text" placeholder="Location" class="form__input" value=search}}
-        <span><button type="submit" name="Go" class="btn btn-go button-fw">Search</button></span>
+        <span><button type="submit" name="Go" class="btn btn-go btn-fw">Search</button></span>
       </div>
     </form>
     <div class="index-grid">

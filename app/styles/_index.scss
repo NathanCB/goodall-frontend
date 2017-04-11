@@ -1,5 +1,5 @@
 .index {
-  padding-top: $m-gutter * 2;
+  padding-top: $m-gutter;
 
   &-grid {
     display: flex;
@@ -10,7 +10,16 @@
     &__item {
       display: inline-block;
       margin: $m-gutter / 2;
+      color: $c-deep-black;
+      font-size: 2rem;
     }
+  }
+
+  &-logo {
+    margin: 0 0 2rem;
+    color: $c-deep-black;
+    font-size: 4rem;
+    text-align: center;
   }
 }
 

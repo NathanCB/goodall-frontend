@@ -4,15 +4,15 @@
 
     {{#with (changeset model validator) as |changeset|}}
     <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
-      {{file-selector}}
+      {{file-selector propertyName="eventImg"}}
       {{!-- {{date-picker}} --}}
-      {{validated-input placeholder="Title"}}
-      {{validated-input type="search" placeholder="Location"}}
-      {{validated-input type="date" placeholder="Date"}}
-      {{validated-input type="time" placeholder="Start Time"}}
-      {{validated-input placeholder="Duration"}}
-      {{validated-input textarea=true placeholder="Description"}}
-      {{validated-input placeholder="Participating Artist(s)"}}
+      {{validated-input placeholder="Title" propertyName="title"}}
+      {{validated-input type="search" placeholder="Location" propertyName="location"}}
+      {{validated-input type="date" placeholder="Date" propertyName="date"}}
+      {{validated-input type="time" placeholder="Start Time" propertyName="startTime"}}
+      {{validated-input placeholder="Duration" propertyName="duration"}}
+      {{validated-input textarea=true placeholder="Description" propertyName="description"}}
+      {{validated-input placeholder="Participating Artist(s)" propertyName="artists"}}
       <div class="button__grid">
         {{#link-to "index" class="btn btn-back"}}Back{{/link-to}}
         <button type="submit" name="Go" class="btn btn-go">Go!</button>

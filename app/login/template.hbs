@@ -1,17 +1,21 @@
-<h2 class="form__heading">Login</h2>
+<div class="section">
+  <div class="container">
+    <h2 class="form__heading">Login</h2>
 
-<div class="form-container">
-  {{#link-to "register" class="form__sub-heading"}}Don't have an account? Sign up here.{{/link-to}}
-  {{#with (changeset model validator) as |changeset|}}
-  <form {{action "authenticate" changeset on="submit"}}>
-    {{validated-input placeholder="Username" changeset=changeset propertyName="username"}}
-    {{validated-input placeholder="Password" changeset=changeset propertyName="password" type="password"}}
-    <div class="button__grid">
-      {{#link-to "index" class="btn btn-back"}}Back{{/link-to}}
-      <button type="submit" name="Go" class="btn btn-go">Go!</button>
+    <div class="form-container">
+      {{#link-to "register" class="form__sub-heading"}}Don't have an account? Sign up here.{{/link-to}}
+      {{#with (changeset model validator) as |changeset|}}
+      <form {{action "authenticate" changeset on="submit"}}>
+        {{validated-input placeholder="Username" changeset=changeset propertyName="username"}}
+        {{validated-input placeholder="Password" changeset=changeset propertyName="password" type="password"}}
+        <div class="btn__grid">
+          {{#link-to "index" class="btn btn-back"}}Back{{/link-to}}
+          <button type="submit" name="Go" class="btn btn-go">Go!</button>
+        </div>
+      </form>
+      {{/with}}
     </div>
-  </form>
-  {{/with}}
+  </div>
 </div>
 
 {{outlet}}

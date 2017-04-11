@@ -7,6 +7,8 @@ export default Ember.Controller.extend({
   validator: {
     eventImg: [
       validatePresence(true)
-    ]
+    ],
+
+
   }
 });
