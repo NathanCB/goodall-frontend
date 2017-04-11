@@ -1,9 +1,15 @@
 .button {
+  width: 100%;
   padding: $m-gutter / 2;
   border: 0;
   border-radius: $br-1;
   outline: none;
   background: $c-green;
+  background-image:
+  linear-gradient(
+    to left,
+    $c-yellow, $c-blue
+  );
   color: $c-beige;
   cursor: pointer;
 }
