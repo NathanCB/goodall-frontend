@@ -3,21 +3,39 @@
     <h2 class="form__heading">Create a new event.</h2>
 
     {{#with (changeset model validator) as |changeset|}}
-    <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
-      {{file-selector propertyName="eventImg"}}
-      {{!-- {{date-picker}} --}}
-      {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
-      {{validated-input type="search" placeholder="Location" changeset=changeset propertyName="location"}}
-      {{validated-input type="date" placeholder="Date" changeset=changeset propertyName="date"}}
-      {{validated-input type="time" placeholder="Start Time" changeset=changeset propertyName="startTime"}}
-      {{validated-input placeholder="Duration" changeset=changeset propertyName="duration"}}
-      {{validated-input textarea=true placeholder="Description" changeset=changeset propertyName="description"}}
-      {{validated-input placeholder="Participating Artist(s)" changeset=changeset propertyName="artists"}}
-      <div class="btn__grid">
-        {{#link-to "index" class="btn btn-back"}}Back{{/link-to}}
-        <button type="submit" name="Go" class="btn btn-go">Submit</button>
-      </div>
-    </form>
+      <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
+        {{file-selector propertyName="eventImg"}} {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
+        {{validated-input type="search" placeholder="Location" changeset=changeset propertyName="location"}}
+        {{#basic-dropdown as |dropdown|}}
+          <input type="text"
+          data-ebd-id="{{dropdown.uniqueId}}-trigger"
+          class="datepicker-demo-input"
+          placeholder="Select Date"
+          onclick={{dropdown.actions.toggle}}
+          value={{if selected (moment-format selected 'DD-MM-YYYY')}}
+          readonly>
+
+          {{#dropdown.content class="datepicker-demo-dropdown"}}
+            {{#power-calendar class="demo-calendar-medium"
+              center=center
+              onCenterChange=(action (mut center) value="date")
+              selected=selected
+              onSelect=(action (mut selected) value="date") as |calendar|}}
+              {{calendar.nav}}
+              {{calendar.days}}
+            {{/power-calendar}}
+          {{/dropdown.content}}
+        {{/basic-dropdown}}
+        {{!-- {{validated-input type="date" placeholder="Date" changeset=changeset propertyName="date"}} --}}
+        {{validated-input type="time" placeholder="Start Time" changeset=changeset propertyName="startTime" }}
+        {{validated-input placeholder="Duration" changeset=changeset propertyName="duration"}}
+        {{validated-input textarea=true placeholder="Description" changeset=changeset propertyName="description"}}
+        {{validated-input placeholder="Participating Artist(s)" changeset=changeset propertyName="artists"}}
+        <div class="btn__grid">
+          {{#link-to "index" class="btn btn-back" }}Back{{/link-to}}
+          <button type="submit" name="Go" class="btn btn-go">Submit</button>
+        </div>
+      </form>
     {{/with}}
   </div>
 </div>

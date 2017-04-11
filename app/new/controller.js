@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import { validatePresence, validateFormat, validateLength, validateConfirmation } from 'ember-changeset-validations/validators'
+import moment from 'moment';
 
 export default Ember.Controller.extend({
   session: Ember.inject.service(),
@@ -52,5 +53,5 @@ export default Ember.Controller.extend({
       const event = this.store.createRecord('event', this.model);
       event.save();
     },
-  }
+  },
 });

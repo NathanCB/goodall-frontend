@@ -37,6 +37,8 @@ $br-1: 0.2rem;
 
 $bs-1: 2px 2px 1px -0.5px $c-black;
 
+@import 'ember-power-calendar';
+@import 'ember-basic-dropdown';
 @import 'reset';
 @import 'layout';
 @import 'form';

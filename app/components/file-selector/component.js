@@ -2,8 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    uploadPhoto(file, resetInput) {
+    async uploadPhoto(file, resetInput) {
+      debugger
 
+      const newFile = file[0];
 
       resetInput();
     },

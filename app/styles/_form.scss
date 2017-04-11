@@ -44,13 +44,19 @@
   text-align: center;
 }
 
-.daterangepicker-input {
+.datepicker-demo-input {
   width: 100%;
   margin-bottom: $m-gutter;
   padding: 10px;
   border: 0;
   border-radius: 5px;
   background: $c-pale-white;
+  font-size: $m-gutter;
+  cursor: text;
+}
+
+.demo-calendar-medium {
+  @include ember-power-calendar($cell-size: 40px);
 }
 
 .hide {
