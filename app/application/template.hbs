@@ -1,5 +1,5 @@
 {{#burger-menu as |burger|}}
-  {{#burger.menu itemTagName="li" as |menu|}}
+  {{#burger.menu dismissOnItemClick=true itemTagName="li" as |menu|}}
      {{!-- {{#link-to "index" class="bm-menu-heading"}}goodall{{/link-to}} --}}
     <ul>
       {{#menu.item}}
