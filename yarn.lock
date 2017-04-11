@@ -2548,6 +2548,12 @@ ember-factory-for-polyfill@^1.1.0:
     ember-cli-babel "^5.1.7"
     ember-cli-version-checker "^1.2.0"
 
+ember-filesystem@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/ember-filesystem/-/ember-filesystem-0.2.2.tgz#48e2d47161a7df63d9e5a29ebd23d604d703af55"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+
 ember-font-awesome@^3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/ember-font-awesome/-/ember-font-awesome-3.0.5.tgz#e1a7370e68b201bdf3b222c680a2cbcd184107cb"
