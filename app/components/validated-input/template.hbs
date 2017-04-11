@@ -8,7 +8,7 @@
   {{#if (get changeset.error propertyName)}}
    {{#each (get (get changeset.error propertyName) 'validation') as |error|}}
      <br>
-     {{error}}
+      {{error}}
    {{/each}}
  {{/if}}
 </p>

@@ -6,8 +6,10 @@
   {{validated-input placeholder="Email" changeset=changeset propertyName="email"}}
   {{validated-input placeholder="Password" changeset=changeset propertyName="password" type="password"}}
   {{validated-input placeholder="Confirm Password" changeset=changeset propertyName="passwordConfirmation" type="password"}}
-  {{#link-to "index"}}Back{{/link-to}}
-  <button type="submit" name="Go" class="button">Go!</button>
+  <div class="button__grid">
+    {{#link-to "index" class="button button-back"}}Back{{/link-to}}
+    <button type="submit" name="Go" class="button button-go">Go!</button>
+  </div>
 </form>
 {{/with}}
 {{outlet}}
