@@ -1,6 +1,6 @@
 {{#burger-menu as |burger|}}
   {{#burger.menu itemTagName="li" as |menu|}}
-    <h1 class="bm-menu-heading">goodall</h1>
+     {{#link-to "index" class="bm-menu-heading"}}goodall{{/link-to}}
     <ul>
       {{#menu.item}}
         {{#link-to 'index'}}<img src="../photos/DIY Logo.png" class="bm-menu-logo" alt="logo">{{/link-to}}
@@ -21,7 +21,7 @@
   {{/burger.menu}}
 
   {{#burger.outlet}}
-    <button {{action burger.state.actions.toggle}}>{{fa-icon "bars" class="burger__bars"}}</button> {{outlet}}
+    <button {{action burger.state.actions.toggle}} class="burger__bars">{{fa-icon "bars"}}</button> {{outlet}}
   {{/burger.outlet}}
 {{/burger-menu}}
 

@@ -1,4 +1,4 @@
-.button {
+.btn {
   padding: $m-gutter;
   transition: background-color 0.2s ease;
   border: 0;
@@ -34,7 +34,7 @@
     //   to right,
     //   $c-yellow, $c-blue
     // );
-    color: $c-deep-black;
+    // color: $c-deep-black;
 
     &:hover {
       background-color: $c-pale-white;

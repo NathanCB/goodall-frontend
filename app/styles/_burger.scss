@@ -1,13 +1,10 @@
-.bm-content {
-
-  & button {
-    border: 0;
-    outline: 0;
-    background: none;
-    color: $c-deep-black;
-    font-size: 2rem;
-    cursor: pointer;
-  }
+.burger__bars {
+  border: 0;
+  outline: 0;
+  background: none;
+  color: $c-deep-black;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .bm-menu {
