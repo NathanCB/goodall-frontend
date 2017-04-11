@@ -6,8 +6,10 @@
   <form {{action "authenticate" changeset on="submit"}}>
     {{validated-input placeholder="Username" changeset=changeset propertyName="username"}}
     {{validated-input placeholder="Password" changeset=changeset propertyName="password" type="password"}}
-    {{#link-to "index"}}Back{{/link-to}}
-    <button type="submit" name="Go" class="button">Go!</button>
+    <div class="button__grid">
+      {{#link-to "index" class="button button-back"}}Back{{/link-to}}
+      <button type="submit" name="Go" class="button button-go">Go!</button>
+    </div>
   </form>
   {{/with}}
 </div>

@@ -1,15 +1,48 @@
 .button {
-  width: 100%;
   padding: $m-gutter / 2;
+  transition: background-color 0.2s ease;
   border: 0;
   border-radius: $br-1;
   outline: none;
-  background: $c-green;
-  background-image:
-  linear-gradient(
-    to left,
-    $c-yellow, $c-blue
-  );
-  color: $c-beige;
+  font-family: $f-4;
+  font-size: 2rem;
   cursor: pointer;
+
+  &:hover {
+    background-color: lighten($c-blue, 5%);
+  }
+
+  &:active {
+    background: $c-yellow;
+  }
+
+  &-back {
+    flex-basis: calc(100% / 3);
+    background: $c-red;
+    background-image:
+    linear-gradient(
+      to left,
+      $c-yellow, $c-red
+    );
+  }
+
+  &-go {
+    flex-basis: calc(100% / 3);
+    background: $c-blue;
+    color: $c-deep-black;
+    // background-image:
+    // linear-gradient(
+    //   to left,
+    //   $c-yellow, $c-blue
+    // );
+  }
+
+  &-fw {
+    width: 100%;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-around;
+  }
 }

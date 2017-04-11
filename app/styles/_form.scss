@@ -2,12 +2,14 @@
 
   &__heading {
     margin-bottom: $m-gutter;
+    color: $c-yellow;
     font-size: 2rem;
   }
 
   &__sub-heading {
     display: inline-block;
     margin-bottom: $m-gutter;
+    color: $c-yellow;
     font-size: 1rem;
   }
 
@@ -26,8 +28,9 @@
     border: 0;
     border-radius: $br-1;
     outline: none;
-    background: $c-white;
+    background: $c-pale-white;
     color: $c-black;
+    font-size: $m-gutter;
   }
 }
 
@@ -36,7 +39,7 @@
   margin-bottom: $m-gutter;
   padding: 10px;
   border-radius: 5px;
-  background: $c-white;
+  background: $c-pale-white;
   color: $c-black;
 }
 
@@ -46,7 +49,7 @@
   padding: 10px;
   border: 0;
   border-radius: 5px;
-  background: $c-white;
+  background: $c-pale-white;
 }
 
 .hide {

@@ -19,27 +19,26 @@
   width: 15vw;
   padding: $m-gutter;
   background: $c-yellow;
-  background-image:
-  linear-gradient(
-    to top right,
-    $c-yellow, $c-blue
-  );
+  // background-image:
+  // linear-gradient(
+  //   to top right,
+  //   $c-yellow, $c-blue
+  // );
   color: $c-deep-black;
-
-  &-grid {
-    text-align: right;
-  }
 
   &-list__item {
     margin: $m-gutter 0;
     font-family: $f-4;
     font-size: 1.5rem;
-    text-align: right;
+    text-align: center;
   }
 }
 
 .logo {
-  margin-bottom: 2rem;
-  font-family: $f-4;
-  font-size: 10rem;
+  max-width: 7rem;
+  margin-bottom: $m-gutter;
+}
+
+.item-center {
+  text-align: center;
 }
