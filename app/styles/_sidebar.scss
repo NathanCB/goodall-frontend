@@ -16,9 +16,8 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 15vw;
-  padding: $m-gutter;
-  background: $c-yellow;
+  width: 25vw;
+  padding: 2rem 0 0 2rem;
   // background-image:
   // linear-gradient(
   //   to top right,
@@ -27,15 +26,15 @@
   color: $c-deep-black;
 
   &-list__item {
-    margin: $m-gutter 0;
-    font-size: 1.5rem;
-    text-align: center;
+    margin: 0 0 1rem 2rem;
+    font-size: 2rem;
+    text-align: left;
   }
 }
 
 .logo {
-  max-width: 7rem;
-  margin-bottom: $m-gutter;
+  max-width: 100%;
+  margin: 3rem 0 5rem;
 }
 
 .item-center {
