@@ -8,10 +8,6 @@ export default Ember.Controller.extend({
       validatePresence(true),
       validateLength({ min: 3 }),
     ],
-    email: [
-      validatePresence(true),
-      validateFormat({ type: 'email' }),
-    ],
     password: [
       validatePresence(true),
     ],
@@ -25,11 +21,12 @@ export default Ember.Controller.extend({
         return alert('Invalid login');
       }
 
+
       changeset.save();
 
-      const {username, password} = this.getProperties('username', 'password');
+      const {username, password} = this.model;
 
-      this.get('session').authenticate('authenticator:token', username, password).catch((reason) => {
+      this.get('session').authenticate('authenticator:jwt', username, password).catch((reason) => {
         this.set('errorMessage', reason.error || reason);
       });
     }

@@ -32,7 +32,9 @@ export default Ember.Controller.extend({
       changeset.save();
 
       const user = this.store.createRecord('user', this.model);
-      user.save();
+      await user.save();
+
+      this.transitionToRoute('login');
     },
   }
 });

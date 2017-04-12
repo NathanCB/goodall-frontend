@@ -35,7 +35,15 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
+  ENV['ember-cli-mirage'] = {
+    enabled: false
+  };
+
   if (environment === 'test') {
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    };
+
     // Testem prefers this...
     ENV.locationType = 'none';
 
@@ -49,6 +57,15 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+
+
+  ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:token'
+  };
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: `${ENV.DS.host}/login`,
+  };
+
 
   return ENV;
 };
