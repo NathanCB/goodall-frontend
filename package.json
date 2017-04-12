@@ -44,6 +44,7 @@
     "ember-filesystem": "^0.2.2",
     "ember-font-awesome": "^3.0.5",
     "ember-load-initializers": "^1.0.0",
+    "ember-modal-dialog": "^1.0.0",
     "ember-network": "^0.3.0",
     "ember-power-calendar": "^0.4.0",
     "ember-resolver": "^4.0.0",
