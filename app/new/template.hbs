@@ -3,19 +3,11 @@
     <h2 class="form__heading">Create a new event.</h2>
 
     {{#with (changeset model validator) as |changeset|}}
-      <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
+      <form class="form" method="post" {{action "saveEvent" changeset on="submit"}} {{action "upload" uploadFile on="submit"}}>
 
-        {{#each selectedFiles as |file|}}
-          <p>{{file.name}}</p>
-        {{/each}}
-        {{#file-picker changeset=(changeset model) action=(action (mut selectedFiles))}}
-          Show File Names
-        {{/file-picker}}
-        {{#file-picker action=(action (mut uploadFile))}}
-          Pick File
-        {{/file-picker}}
+        {{#file-picker action=(action (mut uploadFile))}}{{/file-picker}}
 
-        <button {{action "upload" uploadFile}}>Save To Server</button>
+        {{!-- <button {{action "upload" uploadFile}}>Save To Server</button> --}}
 
         {{#each model as |file|}}
           <p>{{file.name}} {{file.type}} {{file.size}}</p>
