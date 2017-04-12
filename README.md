@@ -17,10 +17,15 @@ You will need the following things properly installed on your computer.
 * `git clone <repository-url>` this repository
 * `cd goodall-frontend`
 * `npm install`
+* `bower install`
+
+If you do not have bower, you can install it by running:
+
+* `npm install -g bower`
 
 ## Running / Development
 
-* `ember serve`
+* `npm start`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
