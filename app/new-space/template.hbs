@@ -4,8 +4,7 @@
 
     {{#with (changeset model validator) as |changeset|}}
     <form class="form" method="post" {{action "saveSpace" changeset on="submit"}}>
-      {{file-selector propertyName="spaceImg"}}
-      {{!-- {{date-picker}} --}}
+      {{file-picker action=(action (mut changeset.spaceImg)) propertyName="spaceImg"}}
       {{validated-input placeholder="Name" changeset=changeset propertyName="name"}}
       {{validated-input type="search" placeholder="Location" changeset=changeset propertyName="location"}}
       {{validated-input textarea=true placeholder="Description" changeset=changeset propertyName="description"}}
