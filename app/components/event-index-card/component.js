@@ -24,7 +24,7 @@ export default Ember.Component.extend({
   //   'didact',
   //   'sorts',
   // ],
-  //
+
   // fontSizes: [
   //   '2',
   //   '3',
@@ -44,11 +44,11 @@ export default Ember.Component.extend({
   //   this._super(...arguments);
   //
   //   const randomFont = this.fonts[Math.floor(Math.random()*this.fonts.length)];
-    // const randomFontSize = this.fontSizes[Math.floor(Math.random()*this.fontSizes.length)];
+  //   const randomFontSize = this.fontSizes[Math.floor(Math.random()*this.fontSizes.length)];
   //   const randomFontColor = this.fontColors[Math.floor(Math.random()*this.fontColors.length)];
   //
   //   this.set('font', randomFont);
-    // this.set('fontSize', randomFontSize);
+  //   this.set('fontSize', randomFontSize);
   //   this.set('fontColor', randomFontColor);
   // }
 });

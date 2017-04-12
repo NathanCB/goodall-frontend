@@ -2,6 +2,7 @@ import Ember from 'ember';
 import { validatePresence, validateFormat, validateConfirmation, validateLength } from 'ember-changeset-validations/validators'
 
 export default Ember.Controller.extend({
+  session: Ember.inject.service('session'),
   validator: {
     username: [
       validatePresence(true),
@@ -21,12 +22,12 @@ export default Ember.Controller.extend({
       await changeset.validate();
 
       if (changeset.get('isInvalid')) {
-        return alert('Invalid fields');
+        return alert('Invalid login');
       }
 
       changeset.save();
 
-      const {username, password} = this.model;
+      const {username, password} = this.getProperties('username', 'password');
 
       this.get('session').authenticate('authenticator:token', username, password).catch((reason) => {
         this.set('errorMessage', reason.error || reason);

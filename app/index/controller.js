@@ -3,6 +3,8 @@ import Ember from 'ember';
 const apiKey = 'AIzaSyByoGefg3HDYycC853DvId8_cmowJgNaAc';
 
 export default Ember.Controller.extend({
+  isShowingModal: false,
+
   actions: {
     searchLocation (query) {
       fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${apiKey}`)
@@ -11,6 +13,10 @@ export default Ember.Controller.extend({
           this.set('lat', result.results[0].geometry.location.lat);
           this.set('lng', result.results[0].geometry.location.lng);
         });
+    },
+
+    toggleModal: function() {
+      this.toggleProperty('isShowingModal');
     },
   }
 });

@@ -1,6 +1,6 @@
 <div class="section index">
   <div class="container">
-    {{!-- <h1 class="index-logo">goodall</h1> --}}
+    <h1 class="index-logo">goodall</h1>
     <form class="form" method="post" {{action "searchLocation" search on="submit"}}>
       <div class="form__block">
         {{input type="text" placeholder="Location" class="form__input" value=search}}
@@ -8,7 +8,7 @@
       </div>
     </form>
     <div class="index-grid">
-      {{event-index-card event=(hash name="Floridian Floral Prints")}}
+      {{event-index-card action="toggleModal" on="click" event=(hash name="Floridian Floral Prints")}}
       {{event-index-card event=(hash name="Gibralter's Legs")}}
       {{event-index-card event=(hash name="For Reconciliation")}}
       {{event-index-card event=(hash name="Oh, We The Fortunate")}}
@@ -31,5 +31,10 @@
     </div>
   </div>
 </div>
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal" targetAttachment="center" translucentOverlay=true}}
+    Oh hai there!
+  {{/modal-dialog}}
+{{/if}}
 
 {{outlet}}
