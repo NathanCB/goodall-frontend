@@ -30,8 +30,18 @@
     color: $c-deep-black;
 
     &:hover {
-      background-color: $c-green;
+      // background-color: $c-green;
+      background-color: lighten($c-yellow, 5%);
     }
+
+    &:active {
+      background-color: lighten($c-yellow, 13%);
+    }
+  }
+
+  &-upload {
+    background: $c-blue;
+    color: $c-pale-white;
   }
 
   &-fw {

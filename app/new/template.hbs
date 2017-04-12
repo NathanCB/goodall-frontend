@@ -3,32 +3,32 @@
     <h2 class="form__heading">Create a new event.</h2>
 
     {{#with (changeset model validator) as |changeset|}}
-      <form class="form" method="post" {{action "saveEvent" changeset on="submit"}} {{action "upload" uploadFile on="submit"}}>
+      <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
 
-        {{#file-picker action=(action (mut uploadFile))}}{{/file-picker}}
+        {{#file-picker action=(action (mut changeset.eventImg))}}{{/file-picker}}
 
-        {{!-- <button {{action "upload" uploadFile}}>Save To Server</button> --}}
-
-        {{#each model as |file|}}
-          <p>{{file.name}} {{file.type}} {{file.size}}</p>
+        {{#each changeset.eventImg as |file|}}
+          <p class="uploader-info">{{file.name}} {{file.type}} {{file.size}}</p>
         {{/each}}
+
         {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
-        {{validated-input type="search" placeholder="Location" changeset=changeset propertyName="location"}}
+        {{validated-input placeholder="Location" changeset=changeset propertyName="location"}}
         {{#basic-dropdown as |dropdown|}}
           <input type="text"
           data-ebd-id="{{dropdown.uniqueId}}-trigger"
           class="datepicker-demo-input"
           placeholder="Select Date"
           onclick={{dropdown.actions.toggle}}
-          value={{if selected (moment-format selected 'DD-MM-YYYY')}}
+          onfocus={{dropdown.actions.toggle}}
+          value={{if changeset.date (moment-format changeset.date 'DD-MM-YYYY')}}
           readonly>
 
           {{#dropdown.content class="datepicker-demo-dropdown"}}
             {{#power-calendar class="demo-calendar-medium"
               center=center
               onCenterChange=(action (mut center) value="date")
-              selected=selected
-              onSelect=(action (mut selected) value="date") as |calendar|}}
+              selected=changeset.date
+              onSelect=(action (mut changeset.date) value="date") as |calendar|}}
               {{calendar.nav}}
               {{calendar.days}}
             {{/power-calendar}}

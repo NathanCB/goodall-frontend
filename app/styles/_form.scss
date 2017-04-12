@@ -55,6 +55,10 @@
   cursor: text;
 }
 
+.uploader-info {
+  color: $c-yellow;
+}
+
 .demo-calendar-medium {
   @include ember-power-calendar($cell-size: 40px);
 }
