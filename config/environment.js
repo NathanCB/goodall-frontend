@@ -3,6 +3,9 @@
 
 module.exports = function(environment) {
   let ENV = {
+    DS: {
+      host: 'http://localhost:8080',
+    },
     modulePrefix: 'goodall-frontend',
     environment,
     rootURL: '/',
