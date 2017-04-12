@@ -44,7 +44,7 @@ export default Ember.Controller.extend({
   },
 
   actions: {
-    async saveSpace(changeset) {
+    async saveEvent(changeset) {
       await changeset.validate();
 
       if (changeset.get('isInvalid')) {

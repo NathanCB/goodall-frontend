@@ -8,7 +8,7 @@
       </div>
     </form>
     <div class="index-grid">
-      {{event-index-card action="toggleModal" on="click" event=(hash name="Floridian Floral Prints")}}
+      {{event-index-card event=(hash name="Floridian Floral Prints")}}
       {{event-index-card event=(hash name="Gibralter's Legs")}}
       {{event-index-card event=(hash name="For Reconciliation")}}
       {{event-index-card event=(hash name="Oh, We The Fortunate")}}
@@ -30,11 +30,5 @@
       {{event-index-card event=(hash name="Favorite Barnacle")}}
     </div>
   </div>
+  {{outlet}}
 </div>
-{{#if isShowingModal}}
-  {{#modal-dialog close="toggleModal" targetAttachment="center" translucentOverlay=true}}
-    Oh hai there!
-  {{/modal-dialog}}
-{{/if}}
-
-{{outlet}}
