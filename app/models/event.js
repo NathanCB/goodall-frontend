@@ -6,7 +6,7 @@ export default DS.Model.extend({
   // location: DS.attr('string')
   date: DS.attr('date'),
   startTime: DS.attr('time'),
-  duration: DS.attr('string'),
+  endTime: DS.attr('string'),
   description: DS.attr('text'),
   artists: DS.attr('string'),
 });
