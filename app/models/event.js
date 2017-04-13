@@ -9,5 +9,5 @@ export default DS.Model.extend({
   endTime: DS.attr('string'),
   description: DS.attr('string'),
   artists: DS.attr('string'),
-  user: DS.attr('string')
+  user: DS.attr('string'),
 });
