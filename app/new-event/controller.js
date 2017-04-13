@@ -48,7 +48,6 @@ export default Ember.Controller.extend({
       await changeset.validate();
 
       if (changeset.get('isInvalid')) {
-        debugger;
         return alert('Please enter valid form data');
       }
 
