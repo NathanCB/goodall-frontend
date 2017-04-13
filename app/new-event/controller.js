@@ -9,9 +9,9 @@ export default Ember.Controller.extend({
   selectedFiles: [],
 
   validator: {
-    eventImg: [
-      validatePresence(true)
-    ],
+    // eventImg: [
+    //   validatePresence(true)
+    // ],
 
     title: [
       validatePresence(true),
@@ -29,7 +29,7 @@ export default Ember.Controller.extend({
       validatePresence(true),
     ],
 
-    duration: [
+    endTime: [
       validatePresence(true),
     ],
 
@@ -45,6 +45,7 @@ export default Ember.Controller.extend({
 
   actions: {
     async saveEvent(changeset) {
+
       await changeset.validate();
 
       if (changeset.get('isInvalid')) {
@@ -53,9 +54,11 @@ export default Ember.Controller.extend({
 
       changeset.save();
 
+      this.store.createRecord('event', this.model).save();
+
       const fetch = this.get('filesystem.fetch');
 
-      fetch('https://arcane-stream-63735.herokuapp.com/upload', {
+      fetch('http://localhost:8080/events', {
           method: 'POST',
           headers: {
             accept: 'application/json',

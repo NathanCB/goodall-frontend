@@ -3,6 +3,13 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: '',
 
+  isShowingModal: false,
+  actions: {
+    toggleModal: function() {
+      this.toggleProperty('isShowingModal');
+    }
+  }
+
   // fonts: [
   //   'vt',
   //   'quicksand',

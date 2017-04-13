@@ -26,32 +26,9 @@
 
   {{#burger.outlet}}
     <button {{action burger.state.actions.toggle}} class="burger__bars">{{fa-icon "bars"}}</button> {{outlet}}
+
+    {{#modal-dialog}}
+      Oh hai there!
+    {{/modal-dialog}}
   {{/burger.outlet}}
 {{/burger-menu}}
-
-
-
-
-
-
-
-{{!-- <div class="page">
-  <div class="page__sidebar sidebar">
-    <div class="sidebar-grid">
-      <div class="sidebar-grid__item item-center">
-        {{#link-to "index"}}<img src="../photos/DIY Logo.png" class="logo" alt="logo">{{/link-to}}
-      </div>
-      <div class="sidebar-grid__item">
-        <ul class="sidebar-list">
-          <li class="sidebar-list__item">{{#link-to "new"}}Create Event{{/link-to}}</li>
-          <li class="sidebar-list__item">{{#link-to "index"}}Spaces{{/link-to}}</li>
-          <li class="sidebar-list__item">{{#link-to "login"}}Login{{/link-to}}</li>
-          {{!-- <li class="sidebar-list__item">{{#link-to "archive"}}Archive{{/link-to}}</li> --}}
-{{!-- </ul>
-      </div>
-    </div>
-  </div>
-  <div class="page__content">
-    {{outlet}}
-  </div>
-</div> --}}
