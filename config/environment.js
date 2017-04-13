@@ -3,6 +3,9 @@
 
 module.exports = function(environment) {
   let ENV = {
+    google: {
+      apiKey: 'AIzaSyByoGefg3HDYycC853DvId8_cmowJgNaAc',
+    },
     DS: {
       host: 'http://localhost:8080',
     },

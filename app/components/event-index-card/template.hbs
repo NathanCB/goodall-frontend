@@ -1,6 +1,5 @@
 <div>
-  <button class="index-grid__item f-{{font}} f-{{fontSize}} f-{{fontColor}}"
-    {{action "toggleModal"}}>
+  {{#link-to "detail" event.id class=(event-card-class font=font fontSize=fontSize fontColor=fontColor)}}
     {{event.name}}
-  </button>
+  {{/link-to}}
 </div>

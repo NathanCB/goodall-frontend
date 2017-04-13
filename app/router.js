@@ -11,7 +11,7 @@ Router.map(function() {
   this.route('register');
   this.route('new');
   this.route('archive');
-  this.route('detail');
+  this.route('detail', {path: '/:id'});
   this.route('new-space');
 });
 
