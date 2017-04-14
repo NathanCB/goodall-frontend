@@ -29,6 +29,8 @@ export default Ember.Controller.extend({
       this.get('session').authenticate('authenticator:jwt', username, password).catch((reason) => {
         this.set('errorMessage', reason.error || reason);
       });
-    }
+      debugger;
+      this.transitionToRoute('event');
+    },
   }
 });
