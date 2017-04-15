@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  queryParams: [
+    'only',
+  ],
   isShowingModal: false,
   geocode: Ember.inject.service(),
 
@@ -8,6 +11,7 @@ export default Ember.Controller.extend({
     searchLocation (query) {
       this.get('geocode').searchLocation(query)
         .then((result) => {
+          console.log(result)
           this.set('lat', result.lat);
           this.set('lng', result.lng);
         });

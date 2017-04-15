@@ -1,6 +1,6 @@
 {{#burger-menu as |burger|}}
   {{#burger.menu dismissOnItemClick=true itemTagName="li" as |menu|}}
-     {{!-- {{#link-to "event" class="bm-menu-heading"}}goodall{{/link-to}} --}}
+     {{#link-to "event" class="bm-menu-heading"}}goodall{{/link-to}}
     <ul>
       {{#menu.item}}
         {{#link-to 'event'}}<img src="../photos/DIY Logo.png" class="bm-menu-logo" alt="logo">{{/link-to}}
@@ -28,7 +28,6 @@
     <button {{action burger.state.actions.toggle}} class="burger__bars">{{fa-icon "bars"}}</button> {{outlet}}
 
     {{#modal-dialog}}
-      Oh hai there!
     {{/modal-dialog}}
   {{/burger.outlet}}
 {{/burger-menu}}

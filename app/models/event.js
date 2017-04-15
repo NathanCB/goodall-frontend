@@ -8,6 +8,6 @@ export default DS.Model.extend({
   startTime: DS.attr('string'),
   endTime: DS.attr('string'),
   description: DS.attr('string'),
-  artists: DS.attr('string'),
-  user: DS.attr('string'),
+  artist: DS.attr('string'),
+  // user: DS.attr('string'),
 });

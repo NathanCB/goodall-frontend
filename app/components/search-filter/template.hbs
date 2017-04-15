@@ -1,1 +1,6 @@
+<div class="btn__grid btn__grid-search">
+  {{#link-to "event" (query-params only="events") class="btn btn-filter"}}Events{{/link-to}}
+  {{#link-to "event" (query-params only="spaces") class="btn btn-filter"}}Spaces{{/link-to}}
+</div>
+
 {{yield}}

@@ -5,7 +5,7 @@ const apiKey = config.google.apiKey;
 
 export default Ember.Service.extend({
   searchLocation (query) {
-    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${apiKey}`)
+    return fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${apiKey}`)
       .then(r => r.json())
       .then((result) => {
         return result.results[0].geometry.location;

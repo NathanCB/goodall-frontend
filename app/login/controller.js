@@ -26,11 +26,13 @@ export default Ember.Controller.extend({
 
       const {username, password} = this.model;
 
-      this.get('session').authenticate('authenticator:jwt', username, password).catch((reason) => {
+      this.get('session').authenticate('authenticator:jwt', {identification: username, password})
+      .then(() => {
+        this.transitionToRoute('event');
+      })
+      .catch((reason) => {
         this.set('errorMessage', reason.error || reason);
       });
-      debugger;
-      this.transitionToRoute('event');
     },
   }
 });
