@@ -4,8 +4,8 @@
   border: 0;
   border-radius: $br-1;
   outline: none;
-  font-family: $f-5;
   font-size: 2rem;
+  text-align: center;
   cursor: pointer;
 
   &__grid {
@@ -43,6 +43,7 @@
     &:hover {
       background-color: lighten($c-blue, 5%);
       color: lighten($c-pale-white, 5%);
+      box-shadow: $bs-2;
     }
 
     &:active {

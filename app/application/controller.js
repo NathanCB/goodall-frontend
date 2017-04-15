@@ -1,5 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  burgerMenu: Ember.inject.service()
+  session: Ember.inject.service('session'),
+  burgerMenu: Ember.inject.service(),
+
+  actions: {
+    invalidateSession() {
+      this.get('session').invalidate();
+    },
+  }
 });

@@ -15,6 +15,7 @@ export default Ember.Controller.extend({
           this.set('lat', result.lat);
           this.set('lng', result.lng);
         });
+
     },
 
     toggleModal: function() {
