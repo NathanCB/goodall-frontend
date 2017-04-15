@@ -4,6 +4,7 @@
   border: 0;
   border-radius: $br-1;
   outline: none;
+  font-family: $f-5;
   font-size: 2rem;
   cursor: pointer;
 
@@ -24,54 +25,29 @@
 
     &:hover {
       background: lighten($c-blue, 5%);
+      color: lighten($c-pale-white, 5%);
     }
 
     &.active {
-      background: $c-green;
-      color: $c-blue;
-    }
-
-    &-go {
-      background: $c-green;
-      color: $c-blue;
+      background: lighten($c-blue, 10%);
+      color: lighten($c-yellow, 10%);
     }
   }
 
-  &-back {
+  &-form {
     display: inline-block;
     flex-basis: calc(100% / 3);
-    background: $c-yellow;
-    color: $c-deep-black;
-    text-align: center;
-
-    &:hover {
-      background-color: $c-pale-white;
-    }
-
-    &:active {
-      // Do something here
-    }
-  }
-
-  &-go {
-    display: inline-block;
-    flex-basis: calc(100% / 3);
-    background: $c-green;
-    color: $c-blue;
-
-    &:hover {
-      background-color: lighten($c-green, 5%);
-    }
-
-    &:active {
-      // background-color: lighten($c-yellow, 13%);
-      background-color: $c-green;
-    }
-  }
-
-  &-upload {
     background: $c-blue;
     color: $c-pale-white;
+
+    &:hover {
+      background-color: lighten($c-blue, 5%);
+      color: lighten($c-pale-white, 5%);
+    }
+
+    &:active {
+      background-color: $c-blue;
+    }
   }
 
   &-fw {
