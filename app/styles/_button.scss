@@ -29,8 +29,11 @@
     }
 
     &.active {
-      background: lighten($c-blue, 10%);
-      color: lighten($c-yellow, 10%);
+      // background: lighten($c-blue, 10%);
+      background: $c-pale-white;
+      // color: lighten($c-yellow, 10%);
+      color: $c-blue;
+      box-shadow: $bs-2;
     }
   }
 
@@ -46,8 +49,16 @@
       box-shadow: $bs-2;
     }
 
+    &:focus {
+      background-color: lighten($c-blue, 5%);
+      color: lighten($c-pale-white, 5%);
+      box-shadow: $bs-2;
+    }
+
     &:active {
       background-color: $c-blue;
+      color: $c-pale-white;
+      box-shadow: none;
     }
   }
 

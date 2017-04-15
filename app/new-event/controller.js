@@ -9,9 +9,6 @@ export default Ember.Controller.extend({
   selectedFiles: [],
 
   validator: {
-    // eventImg: [
-    //   validatePresence(true)
-    // ],
 
     title: [
       validatePresence(true),
@@ -62,6 +59,7 @@ export default Ember.Controller.extend({
           method: 'POST',
           headers: {
             accept: 'application/json',
+            authorization: ''
           },
           body: this.model,
         }).then(res => res.json())
