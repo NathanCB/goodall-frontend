@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
   currentUser: service('current-user'),
   // filesystem: Ember.inject.service(),
   // selectedFiles: [],
-  //
+
   validator: {
 
     title: [
@@ -49,7 +49,12 @@ export default Ember.Controller.extend({
 
       changeset.save();
 
-      await this.store.createRecord('event', this.model).save();
+      await this.store.createRecord('event', this.model).save()
+      .then(() => {
+        this.transitionToRoute('event');
+      });
+
+
 
       // const fetch = this.get('filesystem.fetch');
       // const token = this.get('session.session.content.authenticated.token');

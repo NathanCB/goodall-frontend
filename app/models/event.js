@@ -11,5 +11,4 @@ export default DS.Model.extend({
   date: DS.attr('date'),
   startTime: DS.attr('string'),
   endTime: DS.attr('string'),
-  user: DS.attr('string'),
 });
