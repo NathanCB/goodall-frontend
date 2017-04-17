@@ -10,8 +10,7 @@
     </form>
     <div class="index-grid">
       {{#each model as |event|}}
-      {{!-- {{event-index-card}} --}}
-        <span class="index-grid__item">{{event.title}}</span>
+        {{#link-to 'event.detail' event.id class="index-grid__item"}}{{event.title}}{{/link-to}}
       {{/each}}
     </div>
   </div>

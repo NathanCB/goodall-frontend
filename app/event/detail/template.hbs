@@ -1,32 +1,31 @@
-{{#modal-dialog close="toggleModal"
-                targetAttachment="center"
-                renderInPlace=true
-                translucentOverlay=true}}
-<div class="card">
-  <div class="card-content">
-    <div class="card-content__img">
-      <img class="img-center" src="https://static1.squarespace.com/static/53c46660e4b07557fac2eb85/t/550ee40ce4b02547ba9c325e/1427039245866/doug-rickard_a-new-american-picture_west-gallery-6-b1.jpg?format=1500w" alt="event image">
-    </div>
-    <div class="card-block">
-      <div class="card-block__grid">
-        <span class="card-block__grid-item">Friday, April 14th</span>
-        <span class="card-block__grid-item">6:00pm - 1:00am</span>
-        <span class="card-block__grid-item">1344 Islay Lane</span>
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal" targetAttachment="center" renderInPlace=true translucentOverlay=true}}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-content__img">
+          <img class="img-center" src="https://static1.squarespace.com/static/53c46660e4b07557fac2eb85/t/550ee40ce4b02547ba9c325e/1427039245866/doug-rickard_a-new-american-picture_west-gallery-6-b1.jpg?format=1500w" alt="event image">
+        </div>
+        <div class="card-block">
+          <div class="card-block__grid">
+            <span class="card-block__grid-item">Friday, April 14th</span>
+            <span class="card-block__grid-item">6:00pm - 1:00am</span>
+            <span class="card-block__grid-item">1344 Islay Lane</span>
+          </div>
+        </div>
+        <div class="card-block">
+          <h3 class="card-block__heading">{{title}}</h3>
+        </div>
+        <div class="card-block">
+          <h3 class="card-block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nam distinctio provident saepe, nesciunt consequuntur magni debitis adipisci eos, consequatur ducimus nihil aspernatur facere velit itaque modi porro eum facilis.</h3>
+        </div>
+        <div class="card-block">
+          <div class="card-block__grid">
+            <span class="card-block__grid-item">View Previous</span>
+            {{#link-to 'event' class="card-block__grid-item" }}Back{{/link-to}}
+            <span class="card-block__grid-item">View Next</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="card-block">
-      <h3 class="card-block__heading">{{title}}</h3>
-    </div>
-    <div class="card-block">
-      <h3 class="card-block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nam distinctio provident saepe, nesciunt consequuntur magni debitis adipisci eos, consequatur ducimus nihil aspernatur facere velit itaque modi porro eum facilis.</h3>
-    </div>
-    <div class="card-block">
-      <div class="card-block__grid">
-        <span class="card-block__grid-item">View Previous</span>
-        {{#link-to 'event' class="card-block__grid-item" }}Back{{/link-to}}
-        <span class="card-block__grid-item">View Next</span>
-      </div>
-    </div>
-  </div>
-</div>
-{{/modal-dialog}}
+  {{/modal-dialog}}
+{{/if}}
