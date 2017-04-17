@@ -6,16 +6,16 @@
       </div>
       <div class="card-block">
         <div class="card-block__grid">
-          <span class="card-block__grid-item">{{event.date}}</span>
-          <span class="card-block__grid-item">6:00pm - 1:00am</span>
-          <span class="card-block__grid-item">1344 Islay Lane</span>
+          <span class="card-block__grid-item">{{moment-format model.date "dddd, MMMM Do YYYY"}}</span>
+          <span class="card-block__grid-item">{{model.startTime}} - {{model.endTime}}</span>
+          <span class="card-block__grid-item">{{model.address}}, {{model.city}}</span>
         </div>
       </div>
       <div class="card-block">
-        <h3 class="card-block__heading">{{title}}</h3>
+        <h3 class="card-block__heading">{{model.title}}</h3>
       </div>
       <div class="card-block">
-        <h3 class="card-block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nam distinctio provident saepe, nesciunt consequuntur magni debitis adipisci eos, consequatur ducimus nihil aspernatur facere velit itaque modi porro eum facilis.</h3>
+        <h3 class="card-block__text">{{model.description}}</h3>
       </div>
       <div class="card-block">
         <div class="card-block__grid">

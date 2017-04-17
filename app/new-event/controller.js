@@ -32,7 +32,7 @@ export default Ember.Controller.extend({
       validatePresence(true),
     ],
 
-    artists: [
+    artist: [
       validatePresence(true),
     ],
 
