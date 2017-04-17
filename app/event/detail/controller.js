@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isShowingModal: false,
+  // isShowingModal: false,
   title: 'Floral',
   id: '1',
   description: 'The relentless invisible storm of radio signals and electronic particles, the hustle and bustle, and the billions of petrol explosions in the engine blocks of trucks and cars seem to churn up the molecules of life and heaven so violently that the beautiful fogs are unable to hold together like they once did.',
@@ -10,8 +10,8 @@ export default Ember.Controller.extend({
   endTime: '11:00 PM',
   artist: 'Franz Kline',
   actions: {
-    toggleModal: function() {
-      this.toggleProperty('isShowingModal');
-    }
+    // toggleModal: function() {
+    //   this.toggleProperty('isShowingModal');
+    // }
   }
 });

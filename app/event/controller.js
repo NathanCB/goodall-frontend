@@ -4,8 +4,8 @@ export default Ember.Controller.extend({
   queryParams: [
     'only',
   ],
-  isShowingModal: false,
   geocode: Ember.inject.service(),
+  isShowingModal: false,
 
   actions: {
     // searchLocation (query) {
@@ -17,9 +17,8 @@ export default Ember.Controller.extend({
     //     });
     //
     // },
-
     toggleModal: function() {
       this.toggleProperty('isShowingModal');
-    },
+    }
   }
 });

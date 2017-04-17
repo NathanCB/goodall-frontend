@@ -20,8 +20,7 @@
   {{/burger.menu}}
 
   {{#burger.outlet}}
-    <button {{action burger.state.actions.toggle}} class="burger__bars">{{fa-icon "bars"}}</button> {{outlet}}
-    {{#modal-dialog}}
-    {{/modal-dialog}}
+    <button {{action burger.state.actions.toggle}} class="burger__bars">{{fa-icon "bars"}}</button>
+    {{outlet}}
   {{/burger.outlet}}
 {{/burger-menu}}
