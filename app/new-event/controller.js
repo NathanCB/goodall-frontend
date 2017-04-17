@@ -53,24 +53,25 @@ export default Ember.Controller.extend({
 
       changeset.save();
 
-      this.store.createRecord('event', this.model).save();
+      await this.store.createRecord('event', this.model).save();
 
-      const fetch = this.get('filesystem.fetch');
+      // const fetch = this.get('filesystem.fetch');
+      // const token = this.get('session.session.content.authenticated.token');
 
-      fetch('http://localhost:8080/events', {
-          method: 'POST',
-          headers: {
-            accept: 'application/json',
-            authorization: ''
-          },
-          body: this.model,
-        }).then(res => res.json())
-        .then((data) => {
-          const upload = this.store.pushPayload(data);
-
-          this.store.peekAll('upload');
-        });
-      changeset.save();
+      // fetch('http://localhost:8080/events', {
+      //     method: 'POST',
+      //     headers: {
+      //       accept: 'application/json',
+      //       authorization: `Bearer ${token}`
+      //     },
+      //     body: this.model,
+      //   }).then(res => res.json())
+      //   .then((data) => {
+      //     const upload = this.store.pushPayload(data);
+      //
+      //     this.store.peekAll('upload');
+      //   });
+      // changeset.save();
     },
 
     searchLocation (query) {
