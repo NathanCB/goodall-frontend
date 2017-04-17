@@ -9,27 +9,10 @@
       </div>
     </form>
     <div class="index-grid">
-      {{event-index-card}}
-      {{!-- {{event-index-card event=(hash id=1 name="Floridian Floral Prints")}} --}}
-      {{!-- {{event-index-card event=(hash id=1 name="Gibralter's Legs")}}
-      {{event-index-card event=(hash id=1 name="For Reconciliation")}}
-      {{event-index-card event=(hash id=1 name="Oh, We The Fortunate")}}
-      {{event-index-card event=(hash id=1 name="Colossas")}}
-      {{event-index-card event=(hash id=1 name="Steady Money")}}
-      {{event-index-card event=(hash id=1 name="Contractual Follicles")}}
-      {{event-index-card event=(hash id=1 name="Alpine Inversion")}}
-      {{event-index-card event=(hash id=1 name="Fourth of July Fish Fry My Guy")}}
-      {{event-index-card event=(hash id=1 name="Relapse")}}
-      {{event-index-card event=(hash id=1 name="Fling")}}
-      {{event-index-card event=(hash id=1 name="For the Record")}}
-      {{event-index-card event=(hash id=1 name="Absolutely Honey")}}
-      {{event-index-card event=(hash id=1 name="Greedy Baby")}}
-      {{event-index-card event=(hash id=1 name="Curriculum")}}
-      {{event-index-card event=(hash id=1 name="Solipsist")}}
-      {{event-index-card event=(hash id=1 name="A Study Of")}}
-      {{event-index-card event=(hash id=1 name="Longetivity")}}
-      {{event-index-card event=(hash id=1 name="Beyonce's")}}
-      {{event-index-card event=(hash id=1 name="Favorite Barnacle")}} --}}
+      {{#each model as |event|}}
+      {{!-- {{event-index-card}} --}}
+        <span class="index-grid__item">{{event.title}}</span>
+      {{/each}}
     </div>
   </div>
   {{outlet}}
