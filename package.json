@@ -43,6 +43,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-filesystem": "^0.2.2",
     "ember-font-awesome": "^3.0.5",
+    "ember-link-action": "^0.0.35",
     "ember-load-initializers": "^1.0.0",
     "ember-modal-dialog": "^1.0.0",
     "ember-network": "^0.3.0",
