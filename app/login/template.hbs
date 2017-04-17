@@ -5,6 +5,7 @@
     <div class="form-container">
       {{#link-to "register" class="form__sub-heading"}}Don't have an account? Sign up here.{{/link-to}}
       {{#with (changeset model validator) as |changeset|}}
+
       <form {{action "authenticate" changeset on="submit"}}>
         {{validated-input placeholder="Username" changeset=changeset propertyName="username"}}
         {{validated-input placeholder="Password" changeset=changeset propertyName="password" type="password"}}

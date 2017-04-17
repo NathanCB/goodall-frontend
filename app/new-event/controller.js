@@ -2,11 +2,13 @@ import Ember from 'ember';
 import { validatePresence, validateFormat, validateLength, validateConfirmation } from 'ember-changeset-validations/validators'
 import moment from 'moment';
 const apiKey = 'AIzaSyByoGefg3HDYycC853DvId8_cmowJgNaAc';
+const { inject: { service }, Component } = Ember;
 
 export default Ember.Controller.extend({
   session: Ember.inject.service(),
-  filesystem: Ember.inject.service(),
-  selectedFiles: [],
+  currentUser: service('current-user'),
+  // filesystem: Ember.inject.service(),
+  // selectedFiles: [],
 
   validator: {
 

@@ -11,7 +11,10 @@
 
       {{#menu.item}}
         {{#if session.isAuthenticated}}
-          <a {{action 'invalidateSession'}}>Logout</a>
+          <button {{action 'invalidateSession'}}>Logout</button>
+          {{#if currentUser.user}}
+            <p class="btn">Signed in as {{currentUser.user.username}}</p>
+          {{/if}}
         {{else}}
           {{#link-to 'login'}}Login{{/link-to}}
         {{/if}}
