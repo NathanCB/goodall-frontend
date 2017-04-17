@@ -5,11 +5,11 @@
     {{#with (changeset model validator) as |changeset|}}
       <form class="form" method="post" {{action "saveEvent" changeset on="submit"}}>
 
-        {{!-- {{#file-picker action=(action (mut changeset.eventImg))}}{{/file-picker}}
+        {{#file-picker action=(action (mut changeset.eventImg))}}{{/file-picker}}
 
         {{#each changeset.eventImg as |file|}}
           <p class="uploader-info">{{file.name}} {{file.type}} {{file.size}}</p>
-        {{/each}} --}}
+        {{/each}}
 
         {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
         {{validated-input placeholder="Artist(s)" changeset=changeset propertyName="artist"}}

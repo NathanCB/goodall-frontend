@@ -7,8 +7,8 @@ const { inject: { service }, Component } = Ember;
 export default Ember.Controller.extend({
   session: Ember.inject.service(),
   currentUser: service('current-user'),
-  // filesystem: Ember.inject.service(),
-  // selectedFiles: [],
+  filesystem: Ember.inject.service(),
+  selectedFiles: [],
 
   validator: {
 
@@ -47,32 +47,32 @@ export default Ember.Controller.extend({
         return alert('Please enter valid form data');
       }
 
-      changeset.save();
-
-      await this.store.createRecord('event', this.model).save()
-      .then(() => {
-        this.transitionToRoute('event');
-      });
-
-
-
-      // const fetch = this.get('filesystem.fetch');
-      // const token = this.get('session.session.content.authenticated.token');
-
-      // fetch('http://localhost:8080/events', {
-      //     method: 'POST',
-      //     headers: {
-      //       accept: 'application/json',
-      //       authorization: `Bearer ${token}`
-      //     },
-      //     body: this.model,
-      //   }).then(res => res.json())
-      //   .then((data) => {
-      //     const upload = this.store.pushPayload(data);
-      //
-      //     this.store.peekAll('upload');
-      //   });
       // changeset.save();
+      //
+      // await this.store.createRecord('event', this.model).save()
+      // .then(() => {
+      //   this.transitionToRoute('event');
+      // });
+
+
+
+      const fetch = this.get('filesystem.fetch');
+      const token = this.get('session.session.content.authenticated.token');
+
+      fetch('http://localhost:8080/events', {
+          method: 'POST',
+          headers: {
+            accept: 'application/json',
+            authorization: `Bearer ${token}`
+          },
+          body: this.model,
+        }).then(res => res.json())
+        .then((data) => {
+          const upload = this.store.pushPayload(data);
+
+          this.store.peekAll('upload');
+        });
+      changeset.save();
     },
 
     searchLocation (query) {
