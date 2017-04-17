@@ -10,37 +10,33 @@ export default Ember.Controller.extend({
   // filesystem: Ember.inject.service(),
   // selectedFiles: [],
   //
-  // validator: {
-  //
-  //   title: [
-  //     validatePresence(true),
-  //   ],
-  //
-  //   location: [
-  //     validatePresence(true),
-  //   ],
-  //
-  //   date: [
-  //     validatePresence(true),
-  //   ],
-  //
-  //   startTime: [
-  //     validatePresence(true),
-  //   ],
-  //
-  //   endTime: [
-  //     validatePresence(true),
-  //   ],
-  //
-  //   description: [
-  //     validatePresence(true),
-  //   ],
-  //
-  //   artists: [
-  //     validatePresence(true),
-  //   ],
-  //
-  // },
+  validator: {
+
+    title: [
+      validatePresence(true),
+    ],
+
+    date: [
+      validatePresence(true),
+    ],
+
+    startTime: [
+      validatePresence(true),
+    ],
+
+    endTime: [
+      validatePresence(true),
+    ],
+
+    description: [
+      validatePresence(true),
+    ],
+
+    artists: [
+      validatePresence(true),
+    ],
+
+  },
 
   actions: {
     async saveEvent(changeset) {
