@@ -66,3 +66,53 @@
   }
 
 }
+
+
+/////////////////////////// Modal Buttons
+
+
+.modal-btn {
+  padding: $m-gutter / 2;
+  transition: background-color 0.2s ease;
+  border: 0;
+  border-radius: $br-1;
+  outline: none;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    &-search {
+      margin-bottom: $m-gutter;
+    }
+  }
+
+  &-form {
+    display: inline-block;
+    background: $c-blue;
+    color: $c-pale-white;
+
+    &:hover {
+      background-color: lighten($c-blue, 5%);
+      color: lighten($c-pale-white, 5%);
+      box-shadow: $bs-2;
+    }
+
+    &:focus {
+      background-color: lighten($c-blue, 5%);
+      color: lighten($c-pale-white, 5%);
+      box-shadow: $bs-2;
+    }
+
+    &:active {
+      background-color: $c-blue;
+      color: $c-pale-white;
+      box-shadow: none;
+    }
+  }
+
+}

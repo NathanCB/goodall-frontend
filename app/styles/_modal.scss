@@ -1,4 +1,4 @@
-.form {
+.modal-form {
 
   &__heading {
     margin-bottom: $m-gutter;
@@ -22,7 +22,6 @@
   }
 
   &__input {
-    width: 100%;
     margin-bottom: $m-gutter;
     padding: $m-gutter / 2;
     border: 0;
@@ -38,7 +37,7 @@
   }
 }
 
-.file-uploader {
+.modal-file-uploader {
   display: block;
   margin-bottom: $m-gutter;
   padding: 10px;
@@ -46,8 +45,7 @@
   text-align: center;
 }
 
-.datepicker-demo-input {
-  width: 100%;
+.modal-datepicker-demo-input {
   margin-bottom: $m-gutter;
   padding: 10px;
   border: 0;
@@ -57,7 +55,7 @@
   cursor: text;
 }
 
-.uploader-info {
+.modal-uploader-info {
   color: $c-blue;
 }
 
