@@ -1,23 +1,25 @@
-<div class="section">
-  <div class="container">
-    <h2 class="form__heading">Create a new event.</h2>
+{{#modal-dialog close="toggleModal" targetAttachment="center" renderInPlace=true translucentOverlay=true}}
+{{!--<div class="section">
+  <div class="container">--}}
+    <h2 class="modal-form__heading">Create a new event.</h2>
 
-    {{#with (changeset model validator) as |changeset|}}
-      <form class="form" method="patch" {{action "saveEvent" changeset on="submit"}}>
+      {{#with (changeset model validator) as |changeset|}}
+        <form class="modal-form" method="patch" {{action "saveEvent" changeset on="submit"}}>
+  
+          {{#file-picker action=(action (mut changeset.eventImg))}}{{/file-picker}}
+  
+          {{#each changeset.eventImg as |file|}}
+            <p class="modal-uploader-info">{{file.name}} {{file.type}} {{file.size}}</p>
+          {{/each}}
+  
+          {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
+          {{validated-input placeholder="Artist(s)" changeset=changeset propertyName="artist"}}
+          {{validated-input textarea=true placeholder="Description" changeset=changeset propertyName="description"}}
+          {{validated-input placeholder="Street Address" changeset=changeset propertyName="address"}}
+          {{validated-input placeholder="City" changeset=changeset propertyName="city"}}
+          {{validated-input placeholder="State" changeset=changeset propertyName="state"}}
+          {{validated-input placeholder="Zip" changeset=changeset propertyName="zip"}} 
 
-        {{#file-picker action=(action (mut changeset.eventImg))}}{{/file-picker}}
-
-        {{#each changeset.eventImg as |file|}}
-          <p class="uploader-info">{{file.name}} {{file.type}} {{file.size}}</p>
-        {{/each}}
-
-        {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
-        {{validated-input placeholder="Artist(s)" changeset=changeset propertyName="artist"}}
-        {{validated-input textarea=true placeholder="Description" changeset=changeset propertyName="description"}}
-        {{validated-input placeholder="Street Address" changeset=changeset propertyName="address"}}
-        {{validated-input placeholder="City" changeset=changeset propertyName="city"}}
-        {{validated-input placeholder="State" changeset=changeset propertyName="state"}}
-        {{validated-input placeholder="Zip" changeset=changeset propertyName="zip"}}
         {{#basic-dropdown as |dropdown|}}
           <input type="text"
           data-ebd-id="{{dropdown.uniqueId}}-trigger"
@@ -47,6 +49,6 @@
         </div>
       </form>
     {{/with}}
-  </div>
-</div>
-{{outlet}}
+  {{!--</div>
+</div>--}}
+{{/modal-dialog}}

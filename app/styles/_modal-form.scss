@@ -1,0 +1,70 @@
+.form {
+
+  &__heading {
+    margin-bottom: $m-gutter;
+    color: $c-blue;
+    font-size: 2rem;
+  }
+
+  &__sub-heading {
+    display: inline-block;
+    margin-bottom: $m-gutter;
+    color: $c-blue;
+    font-size: 1rem;
+  }
+
+  &__field-title {
+    text-align: left;
+  }
+
+  &__block {
+    text-align: center;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: $m-gutter;
+    padding: $m-gutter / 2;
+    border: 0;
+    border-radius: $br-1;
+    outline: none;
+    background: $c-pale-white;
+    color: $c-black;
+    font-size: $m-gutter;
+
+    &:focus {
+      box-shadow: $bs-2;
+    }
+  }
+}
+
+.file-uploader {
+  display: block;
+  margin-bottom: $m-gutter;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.datepicker-demo-input {
+  width: 100%;
+  margin-bottom: $m-gutter;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  background: $c-pale-white;
+  font-size: $m-gutter;
+  cursor: text;
+}
+
+.uploader-info {
+  color: $c-blue;
+}
+
+.demo-calendar-medium {
+  @include ember-power-calendar($cell-size: 40px);
+}
+
+.hide {
+  display: none;
+}
