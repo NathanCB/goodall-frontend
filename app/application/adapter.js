@@ -10,7 +10,7 @@ export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
   urlForQueryRecord(query) {
     if (query.me) {
       delete query.me;
-      return `${this._super(...arguments)}/me`;
+      return `${this._super(...arguments)}/current`;
     }
 
     return this._super(...arguments);
