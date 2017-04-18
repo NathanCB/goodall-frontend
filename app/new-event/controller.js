@@ -76,6 +76,8 @@ export default Ember.Controller.extend({
         });
     },
 
+https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places
+
     searchLocation (query) {
       fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${apiKey}`)
         .then(r => r.json())

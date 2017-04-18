@@ -12,7 +12,11 @@
         </div>
       </div>
       <div class="card-block">
-        {{#link-to 'event.edit' model}}Edit{{/link-to}}
+
+        {{#if (and session.isAuthenticated (eq model.createdBy.id currentUser.user.id))}}
+          {{#link-to 'event.edit' model}}Edit{{/link-to}}
+        {{/if}}
+
         <h3 class="card-block__heading">{{model.title}}</h3>
       </div>
       <div class="card-block">

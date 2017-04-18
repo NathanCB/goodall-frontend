@@ -11,4 +11,7 @@ export default DS.Model.extend({
   date: DS.attr('date'),
   startTime: DS.attr('string'),
   endTime: DS.attr('string'),
+
+  createdBy: DS.attr(),
+  user: DS.belongsTo('user'),
 });
