@@ -48,12 +48,6 @@ export default Ember.Controller.extend({
       }
 
       changeset.save();
-      // await this.store.createRecord('event', this.model).save()
-      // .then(() => {
-      //   this.transitionToRoute('event');
-      // });
-
-
 
       const fetch = this.get('filesystem.fetch');
       const token = this.get('session.session.content.authenticated.token');
@@ -65,7 +59,6 @@ export default Ember.Controller.extend({
             authorization: `Bearer ${token}`
           },
           body: {
-            // this.model?
             photo: this.model.eventImg[0],
           }
         }).then(res => res.json())
@@ -76,8 +69,6 @@ export default Ember.Controller.extend({
         });
     },
 
-https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places
-
     searchLocation (query) {
       fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${query}&key=${apiKey}`)
         .then(r => r.json())
@@ -85,6 +76,6 @@ https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places
           this.set('lat', result.results[0].geometry.location.lat);
           this.set('lng', result.results[0].geometry.location.lng);
         });
-    },
+    }
   },
 });

@@ -15,7 +15,25 @@
         {{validated-input placeholder="Artist(s)" changeset=changeset propertyName="artist"}}
         {{validated-input textarea=true placeholder="Description" changeset=changeset propertyName="description"}}
         
-        {{validated-input placeholder="Street Address" changeset=changeset propertyName="address"}}
+
+
+
+        {{place-autocomplete-field
+          value= model.address
+          disable=false
+          handlerController= this
+          inputClass= 'place-autocomplete--input'
+          focusOutCallback='done'
+          placeChangedCallback='placeChanged'
+          types='(cities)'
+          restrictions=restrictionsObjectFromController
+          withGeoLocate=true 
+}}
+
+
+
+
+        {{!--{{validated-input placeholder="Street Address" changeset=changeset propertyName="address"}}--}}
         {{validated-input placeholder="City" changeset=changeset propertyName="city"}}
         {{validated-input placeholder="State" changeset=changeset propertyName="state"}}
         {{validated-input placeholder="Zip" changeset=changeset propertyName="zip"}}

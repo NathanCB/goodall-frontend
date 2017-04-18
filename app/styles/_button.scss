@@ -29,9 +29,7 @@
     }
 
     &.active {
-      // background: lighten($c-blue, 10%);
       background: $c-pale-white;
-      // color: lighten($c-yellow, 10%);
       color: $c-blue;
     }
   }
