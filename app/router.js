@@ -10,8 +10,8 @@ Router.map(function() {
   this.route('event', { path: '/' }, function() {
     this.route('detail', { path: '/:id' })
     this.route('edit');
+    this.route('new');
   });
-  this.route('new-event');
   this.route('login');
   this.route('register');
   this.route('archive');
