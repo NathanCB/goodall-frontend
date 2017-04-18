@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('event', { path: '/' }, function() {
     this.route('detail', { path: '/:id' })
+    this.route('edit');
   });
   this.route('new-event');
   this.route('login');

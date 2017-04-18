@@ -47,8 +47,7 @@ export default Ember.Controller.extend({
         return alert('Please enter valid form data');
       }
 
-      // changeset.save();
-      //
+      changeset.save();
       // await this.store.createRecord('event', this.model).save()
       // .then(() => {
       //   this.transitionToRoute('event');
@@ -59,20 +58,22 @@ export default Ember.Controller.extend({
       const fetch = this.get('filesystem.fetch');
       const token = this.get('session.session.content.authenticated.token');
 
-      fetch('http://localhost:8080/events', {
+      fetch('http://localhost:8080/events/upload', {
           method: 'POST',
           headers: {
             accept: 'application/json',
             authorization: `Bearer ${token}`
           },
-          body: this.model,
+          body: {
+            // this.model?
+            photo: this.model.eventImg[0],
+          }
         }).then(res => res.json())
         .then((data) => {
           const upload = this.store.pushPayload(data);
 
           this.store.peekAll('upload');
         });
-      changeset.save();
     },
 
     searchLocation (query) {
