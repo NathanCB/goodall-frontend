@@ -50,4 +50,9 @@
 
 .ember-modal-dialog {
   padding: 0;
+  overflow: auto;
+}
+
+.ember-modal-overlay {
+  overflow: auto;
 }
