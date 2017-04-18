@@ -7,12 +7,7 @@ import {
 } from 'ember-changeset-validations/validators'
 import moment from 'moment';
 const apiKey = 'AIzaSyByoGefg3HDYycC853DvId8_cmowJgNaAc';
-const {
-  inject: {
-    service
-  },
-  Component
-} = Ember;
+const { inject: { service }, Component } = Ember;
 
 export default Ember.Controller.extend({
   session: Ember.inject.service(),
@@ -48,6 +43,10 @@ export default Ember.Controller.extend({
   },
 
   actions: {
+    toggleModal: function() {
+      this.transitionToRoute('event.index');
+    },
+    
     async saveEvent(changeset) {
 
       await changeset.validate();
@@ -68,7 +67,6 @@ export default Ember.Controller.extend({
             authorization: `Bearer ${token}`
           },
           body: {
-            // this.model?
             photo: this.model.eventImg[0],
           }
         }).then(res => res.json())

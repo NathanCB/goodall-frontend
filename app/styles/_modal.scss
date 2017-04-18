@@ -1,4 +1,5 @@
 .modal-form {
+  min-width: 40vw;  
 
   &__heading {
     margin-bottom: $m-gutter;
@@ -22,6 +23,7 @@
   }
 
   &__input {
+    width: 100%;
     margin-bottom: $m-gutter;
     padding: $m-gutter / 2;
     border: 0;
@@ -65,4 +67,11 @@
 
 .hide {
   display: none;
+}
+
+.ember-modal-dialog {
+  padding: $m-gutter;
+  max-width: calc(100vw - 4rem);
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
 }

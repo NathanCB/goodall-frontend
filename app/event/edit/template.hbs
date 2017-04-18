@@ -1,5 +1,4 @@
 {{#modal-dialog close="toggleModal" targetAttachment="center" renderInPlace=true translucentOverlay=true}}
-    <h2 class="modal-form__heading">Create a new event.</h2>
 
       {{#with (changeset model validator) as |changeset|}}
         <form class="modal-form" method="patch" {{action "saveEvent" changeset on="submit"}}>

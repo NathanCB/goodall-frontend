@@ -1,15 +1,12 @@
 .card {
   display: flex;
   justify-content: center;
-  // color: $c-deep-black;
   color: $c-blue;
 
   &-content {
     width: 40rem;
     border-radius: 5px;
     background: $c-pale-white;
-    // background: $c-yellow;
-    // box-shadow: $bs-2;
 
     &__img {
       position: relative;

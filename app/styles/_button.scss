@@ -84,7 +84,6 @@
   &__grid {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
 
     &-search {
       margin-bottom: $m-gutter;
@@ -92,6 +91,7 @@
   }
 
   &-form {
+    width: 49%;
     display: inline-block;
     background: $c-blue;
     color: $c-pale-white;
@@ -113,6 +113,10 @@
       color: $c-pale-white;
       box-shadow: none;
     }
+  }
+
+  &-fw {
+    width: 100%;
   }
 
 }
