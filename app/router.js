@@ -8,13 +8,12 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('event', { path: '/' }, function() {
-    this.route('detail', { path: '/:id' })
-    this.route('edit');
+    this.route('detail', { path: 'detail/:id' });
+    this.route('edit', { path: 'edit/:id' });
   });
   this.route('new-event');
   this.route('login');
   this.route('register');
-  this.route('archive');
   this.route('new-space');
 });
 
