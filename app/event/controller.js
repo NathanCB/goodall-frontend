@@ -8,13 +8,14 @@ export default Ember.Controller.extend({
   isShowingModal: false,
 
   actions: {
-    searchLocation (query) {
-      this.get('geocode').searchLocation(query)
-        .then((result) => {
-          this.set('lat', result.lat);
-          this.set('lng', result.lng);
-        });
-    
+    async searchLocation (zip) {
+      try {
+        const events = await this.store.query('event', { zip: zip });
+          
+        this.set('model', events);
+      } catch (error) { 
+        alert('No events found. This may not be a valid zip code');
+      }
     },
     toggleModal: function() {
       this.toggleProperty('isShowingModal');

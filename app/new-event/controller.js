@@ -59,13 +59,24 @@ export default Ember.Controller.extend({
             authorization: `Bearer ${token}`
           },
           body: {
-            photo: this.model.eventImg[0],
+            file: this.model.eventImg[0],
+            'address': this.model.address,
+            'city': this.model.city,
+            'state': this.model.state,
+            'zip': this.model.zip,
+            'title': this.model.title,
+            'artist': this.model.artist,
+            'date': this.model.date,
+            'description': this.model.description,
+            'start-time': this.model.startTime,
+            'end-time': this.model.endTime,
           }
         }).then(res => res.json())
         .then((data) => {
           const upload = this.store.pushPayload(data);
+          
 
-          this.store.peekAll('upload');
+          this.transitionToRoute('event.detail', data.data.id);
         });
     },
 

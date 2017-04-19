@@ -1,8 +1,17 @@
 {{#burger-menu as |burger|}}
   {{#burger.menu dismissOnItemClick=true itemTagName="li" as |menu|}}
     <ul>
+
       {{#menu.item}}
         {{#link-to 'event'}}<img src="../photos/DIY Logo.png" class="bm-menu-logo" alt="logo">{{/link-to}}
+      {{/menu.item}}
+      
+      {{#menu.item}}
+        {{#if session.isAuthenticated}}
+          {{#if currentUser.user}}
+            <p class="bm-menu-item bm-menu-username">Signed in as {{currentUser.user.username}}</p>
+          {{/if}}
+        {{/if}}
       {{/menu.item}}
 
       {{#menu.item}}
@@ -12,9 +21,6 @@
       {{#menu.item}}
         {{#if session.isAuthenticated}}
           <a href="#" {{action 'invalidateSession'}}>Logout</a>
-          {{#if currentUser.user}}
-            <p class="btn">Signed in as {{currentUser.user.username}}</p>
-          {{/if}}
         {{else}}
           {{#link-to 'login'}}Login{{/link-to}}
         {{/if}}
