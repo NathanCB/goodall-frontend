@@ -5,6 +5,14 @@
       {{#menu.item}}
         {{#link-to 'event'}}<img src="../photos/DIY Logo.png" class="bm-menu-logo" alt="logo">{{/link-to}}
       {{/menu.item}}
+
+      {{#menu.item}}
+        {{#if session.isAuthenticated}}
+          <a href="#" {{action 'invalidateSession'}}>Logout</a>
+        {{else}}
+          {{#link-to 'login'}}Login{{/link-to}}
+        {{/if}}
+      {{/menu.item}}
       
       {{#menu.item}}
         {{#if session.isAuthenticated}}
@@ -15,15 +23,13 @@
       {{/menu.item}}
 
       {{#menu.item}}
+      {{#if seesion.isAuthenticated}}
         {{#link-to 'new-event'}}Create Event{{/link-to}}
+      {{/if}}
       {{/menu.item}}
 
       {{#menu.item}}
-        {{#if session.isAuthenticated}}
-          <a href="#" {{action 'invalidateSession'}}>Logout</a>
-        {{else}}
-          {{#link-to 'login'}}Login{{/link-to}}
-        {{/if}}
+        {{#link-to 'register'}}Create Account{{/link-to}}
       {{/menu.item}}
     </ul>
   {{/burger.menu}}

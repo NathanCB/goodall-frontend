@@ -1,7 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  // file: DS.attr('')
   title: DS.attr('string'),
   artist: DS.attr('string'),
   description: DS.attr('string'),
@@ -13,6 +12,7 @@ export default DS.Model.extend({
   startTime: DS.attr('string'),
   endTime: DS.attr('string'),
   photoUrl: DS.attr('string'),
+  bgUrl: DS.attr('string'),
 
   createdBy: DS.attr(),
   user: DS.belongsTo('user'),
