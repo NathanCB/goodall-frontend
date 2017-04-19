@@ -3,13 +3,13 @@
   height: 100vh;
 
   &__sidebar {
-    overflow-y: auto;
+        overflow-y: auto;
   }
 
   &__content {
-    flex-grow: 1;
-    padding: 2rem;
-    overflow-y: auto;
+        flex-grow: 1;
+        padding: 2rem;
+        overflow-y: auto;
   }
 }
 

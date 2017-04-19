@@ -1,35 +1,36 @@
 {{#burger-menu as |burger|}}
   {{#burger.menu dismissOnItemClick=true itemTagName="li" as |menu|}}
-    <ul>
+    <ul class="bm-content">
 
       {{#menu.item}}
         {{#link-to 'event'}}<img src="../photos/DIY Logo.png" class="bm-menu-logo" alt="logo">{{/link-to}}
       {{/menu.item}}
 
-      {{#menu.item}}
-        {{#if session.isAuthenticated}}
-          <a href="#" {{action 'invalidateSession'}}>Logout</a>
-        {{else}}
-          {{#link-to 'login'}}Login{{/link-to}}
-        {{/if}}
-      {{/menu.item}}
-      
-      {{#menu.item}}
-        {{#if session.isAuthenticated}}
-          {{#if currentUser.user}}
-            <p class="bm-menu-item bm-menu-username">Signed in as {{currentUser.user.username}}</p>
+            {{#menu.item}}
+          {{#if session.isAuthenticated}}
+            {{#link-to 'new-event'}}Create Event{{/link-to}}
+          {{else}}
+            {{#link-to 'register'}}Create Account{{/link-to}}
           {{/if}}
-        {{/if}}
-      {{/menu.item}}
-
-      {{#menu.item}}
-      {{#if session.isAuthenticated}}
-        {{#link-to 'new-event'}}Create Event{{/link-to}}
-      {{else}}
-        {{#link-to 'register'}}Create Account{{/link-to}}
-      {{/if}}
-      {{/menu.item}}
+          {{/menu.item}}
+    
+          {{#menu.item}}
+            {{#if session.isAuthenticated}}
+              <a href="#" {{action 'invalidateSession'}}>Logout</a>
+            {{else}}
+              {{#link-to 'login'}}Login{{/link-to}}
+            {{/if}}
+          {{/menu.item}}
     </ul>
+    <ul class="bm-footer">
+        {{#menu.item}}
+          {{#if session.isAuthenticated}}
+            {{#if currentUser.user}}
+              <p class="bm-menu-item bm-menu-username">Signed in as {{currentUser.user.username}}</p>
+            {{/if}}
+          {{/if}}
+        {{/menu.item}}
+      </ul>
   {{/burger.menu}}
 
   {{#burger.outlet}}
