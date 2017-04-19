@@ -23,13 +23,11 @@
       {{/menu.item}}
 
       {{#menu.item}}
-      {{#if seesion.isAuthenticated}}
+      {{#if session.isAuthenticated}}
         {{#link-to 'new-event'}}Create Event{{/link-to}}
-      {{/if}}
-      {{/menu.item}}
-
-      {{#menu.item}}
+      {{else}}
         {{#link-to 'register'}}Create Account{{/link-to}}
+      {{/if}}
       {{/menu.item}}
     </ul>
   {{/burger.menu}}

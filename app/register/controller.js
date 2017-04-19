@@ -7,7 +7,6 @@ export default Ember.Controller.extend({
   validator: {
     username: [
       validatePresence(true),
-      validateLength({ min: 3 }),
     ],
     email: [
       validatePresence(true),
