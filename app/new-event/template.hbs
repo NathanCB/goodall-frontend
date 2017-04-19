@@ -18,7 +18,7 @@
 
 
 
-        {{place-autocomplete-field
+        {{!--{{place-autocomplete-field
           value= model.address
           disable=false
           handlerController= this
@@ -28,12 +28,12 @@
           types='(cities)'
           restrictions=restrictionsObjectFromController
           withGeoLocate=true 
-}}
+}}--}}
 
 
 
 
-        {{!--{{validated-input placeholder="Street Address" changeset=changeset propertyName="address"}}--}}
+        {{validated-input placeholder="Street Address" changeset=changeset propertyName="address"}}
         {{validated-input placeholder="City" changeset=changeset propertyName="city"}}
         {{validated-input placeholder="State" changeset=changeset propertyName="state"}}
         {{validated-input placeholder="Zip" changeset=changeset propertyName="zip"}}
