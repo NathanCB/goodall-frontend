@@ -9,13 +9,12 @@
       </div>
       <div class="card-block">
         <div class="card-block__grid">
-          <span class="card-block__grid-item">{{moment-format model.date "dddd, MMMM Do YYYY"}}</span>
-          <span class="card-block__grid-item">{{model.startTime}} - {{model.endTime}}</span>
+          <span class="card-block__grid-item">{{moment-format model.date "dddd, MMMM Do YYYY"}}</span>  
+          <span class="card-block__grid-item">{{moment-format model.startTime "hh:mm A" "HH:mm"}} - {{moment-format model.endTime "hh:mm A" "HH:mm"}}</span>
           <span class="card-block__grid-item">{{model.address}}, {{model.city}}, {{model.state}}</span>
         </div>
       </div>
       <div class="card-block">
-
         {{#if (and session.isAuthenticated (eq model.createdBy.id currentUser.user.id))}}
           {{#link-to 'event.edit' model}}Edit{{/link-to}}
           <button class="btn" {{action "deleteEvent" model}}>Delete</button>

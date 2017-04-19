@@ -8,9 +8,10 @@ export default Ember.Controller.extend({
   isShowingModal: false,
 
   actions: {
-    async searchLocation (zip) {
+    async searchLocation (city) {
       try {
-        const events = await this.store.query('event', { zip: zip });
+        // const events = await this.store.query('event', { zip: zip });
+        const events = await this.store.query('event', { city: city });
           
         this.set('model', events);
       } catch (error) { 
