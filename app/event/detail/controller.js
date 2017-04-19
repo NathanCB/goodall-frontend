@@ -8,6 +8,12 @@ export default Ember.Controller.extend({
   actions: {
     toggleModal: function() {
       this.transitionToRoute('event.index');
-    }
+    },
+    
+    deleteEvent() {
+      this.model.destroyRecord().then(() => {
+        this.transitionToRoute('event');
+      });
+    },
   }
 });

@@ -15,6 +15,7 @@
 
         {{#if (and session.isAuthenticated (eq model.createdBy.id currentUser.user.id))}}
           {{#link-to 'event.edit' model}}Edit{{/link-to}}
+          <button class="btn" {{action "deleteEvent" model}}>Delete</button>
         {{/if}}
 
         <h3 class="card-block__heading">{{model.title}}</h3>
@@ -24,9 +25,7 @@
       </div>
       <div class="card-block">
         <div class="card-block__grid">
-          <span class="card-block__grid-item">View Previous</span>
-          {{#link-to 'event' class="card-block__grid-item" }}Back{{/link-to}}
-          <span class="card-block__grid-item">View Next</span>
+          {{#link-to 'event' class="card-block__grid-item"}}Back{{/link-to}}
         </div>
       </div>
     </div>
