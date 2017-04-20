@@ -1,5 +1,12 @@
-{{!-- {{#each model as |event|}}
-{{#link-to 'event.detail' event.id class=(event-card-class font=font fontSize=fontSize fontColor=fontColor)}}
+{{!--{{#each model as |event|}}--}}
+{{#link-to 'event.detail' event.id class=(event-card-class font=font fontSize=fontSize fontColor=fontColor) invokeAction='toggleModal'}}
   {{event.title}}
 {{/link-to}}
-{{/each}} --}}
+{{!--{{/each}} --}}
+
+{{!-- This was in the event template --}}
+{{!--{{#each model as |event|}}
+  {{#link-to 'event.detail' event.id class="index-grid__item" invokeAction='toggleModal'}}
+    {{event.title}}
+  {{/link-to}}
+{{/each}}--}}

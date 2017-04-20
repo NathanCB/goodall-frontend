@@ -18,6 +18,12 @@
     }
   }
 
+  &-delete {
+    background: none;
+    color: $c-red;
+    font-size: $m-gutter;
+  }
+
   &-filter {
     width: 49%;
     background: $c-blue;
@@ -38,7 +44,7 @@
     display: inline-block;
     flex-basis: calc(100% / 3);
     background: $c-red;
-    color: $c-pale-white;
+    color: $c-test;
 
     &:hover {
       background-color: lighten($c-blue, 5%);
