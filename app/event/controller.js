@@ -11,8 +11,8 @@ export default Ember.Controller.extend({
     async searchLocation (city) {
       try {
         // const events = await this.store.query('event', { zip: zip });
-        // const events = await this.store.query('event', { searchBy: 'city', value: city });
-        const events = await this.store.query('event', { city: city });
+        const events = await this.store.query('event', { searchBy: 'city', value: city });
+        // const events = await this.store.query('event', { city: city });
 
         this.set('model', events);
       } catch (error) {
