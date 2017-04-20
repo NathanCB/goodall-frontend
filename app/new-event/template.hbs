@@ -8,7 +8,8 @@
         {{#file-picker action=(action (mut changeset.eventImg))}}{{/file-picker}}
 
         {{#each changeset.eventImg as |file|}}
-          <p class="uploader-info">{{file.name}} {{file.type}} {{file.size}}</p>
+          <p class="uploader-info">{{file.name}} – {{file.size}} bytes</p>
+          {{!--{{file.type}}--}}
         {{/each}}
 
         {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
@@ -18,7 +19,7 @@
 
 
 
-        {{!--{{place-autocomplete-field
+  {{!--{{place-autocomplete-field
           value= model.address
           disable=false
           handlerController= this
@@ -28,7 +29,7 @@
           types='(cities)'
           restrictions=restrictionsObjectFromController
           withGeoLocate=true 
-}}--}}
+        }}--}}
 
 
 

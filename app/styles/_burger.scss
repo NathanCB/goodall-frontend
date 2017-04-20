@@ -1,8 +1,12 @@
+.bm-content {
+  background: $c-deep-black !important;
+}
+
 .burger__bars {
   border: 0;
   outline: 0;
   background: none;
-  color: $c-deep-black;
+  color: $c-red;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -12,16 +16,12 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
-  background: $c-pale-white;
+  background: $c-deep-black;
   color: $c-deep-black;
   overflow: auto;
 
   &-heading {
     font-size: 4rem;
-  }
-
-  &-content {
-    flex-grow: 1;
   }
 
   &-logo {
@@ -30,7 +30,7 @@
 
   &-item {
     margin-bottom: $m-gutter;
-    color: $c-deep-black;
+    color: $c-red;
     font-size: 2rem;
   }
 

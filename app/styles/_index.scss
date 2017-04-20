@@ -10,14 +10,14 @@
     &__item {
       display: inline-block;
       margin: $m-gutter / 2;
-      color: $c-deep-black;
+      color: $c-red;
       font-size: 2rem;
     }
   }
 
   &-logo {
     margin: 0 0 2rem;
-    color: $c-blue;
+    color: $c-red;
     font-size: 4rem;
     text-align: center;
   }
