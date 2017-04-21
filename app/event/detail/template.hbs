@@ -17,11 +17,6 @@
           </div>
       </div>
       <div class="card-block">
-        {{#if (and session.isAuthenticated (eq model.createdBy.id currentUser.user.id))}}
-          {{#link-to 'event.edit' model}}Edit{{/link-to}}
-          <button class="btn btn-delete" {{action "deleteEvent" model}}>Delete</button>
-        {{/if}}
-
         <h3 class="card-block__heading">{{model.title}}</h3>
       </div>
       <div class="card-block">
@@ -29,7 +24,11 @@
       </div>
       <div class="card-block">
         <div class="card-block__grid">
-          {{#link-to 'event' class="card-block__grid-item"}}Back{{/link-to}}
+          {{#link-to 'event' class="btn btn-edit"}}Back{{/link-to}}
+          {{#if (and session.isAuthenticated (eq model.createdBy.id currentUser.user.id))}}
+          {{#link-to 'event.edit' model class="btn btn-edit"}}Edit{{/link-to}}
+          <button class="btn btn-delete" {{action "deleteEvent" model}}>Delete</button>
+        {{/if}}
         </div>
       </div>
     </div>

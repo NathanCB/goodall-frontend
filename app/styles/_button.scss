@@ -41,9 +41,20 @@
   }
 
   &-delete {
-    background: none;
-    color: $c-red;
+    padding: 2px 6px 3px 6px;
+    background: $c-test;
+    border-radius: $br-1;
+    color: $c-electric-blue;
+    font-family: $f-10;
     font-size: $m-gutter;
+  }
+
+  &-edit {
+    padding: 2px 6px 3px 6px;
+    background: $c-test;
+    border-radius: $br-1;
+    font-size: $m-gutter;
+    color: $c-electric-blue;
   }
 
   &-filter {
