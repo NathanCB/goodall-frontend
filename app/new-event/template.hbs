@@ -15,7 +15,7 @@
         {{validated-input placeholder="Title" changeset=changeset propertyName="title"}}
         {{validated-input placeholder="Artist(s)" changeset=changeset propertyName="artist"}}
         {{validated-input textarea=true placeholder="Description" changeset=changeset propertyName="description"}}
-        
+
 
 
 
@@ -28,7 +28,7 @@
           placeChangedCallback='placeChanged'
           types='(cities)'
           restrictions=restrictionsObjectFromController
-          withGeoLocate=true 
+          withGeoLocate=true
         }}--}}
 
 
@@ -61,9 +61,9 @@
         {{/basic-dropdown}}
         {{validated-input type="time" placeholder="Start Time" changeset=changeset propertyName="startTime" }}
         {{validated-input type="time" placeholder="End Time" changeset=changeset propertyName="endTime"}}
-        <div class="btn__grid">
-          {{#link-to 'event' class="btn btn-form" }}Back{{/link-to}}
-          <button type="submit" name="Go" class="btn btn-form">Submit</button>
+        <div class="btn__bottomgrid">
+          {{#link-to 'event' class="btn btn__bottomgrid-item btn-form" }}Back{{/link-to}}
+          <button type="submit" name="Go" class="btn btn__bottomgrid-item btn-form">Create</button>
         </div>
       </form>
     {{/with}}

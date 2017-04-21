@@ -1,12 +1,16 @@
 .bm-content {
-  background: $c-test !important;
+  // background: $c-test !important;
+  background: url('../../photos/Silver-Tarp-glitched-4-20-2017-11-45-14-PM copy.png') no-repeat center center fixed !important;
+  // object-fit: fill !important;
+  height: 100vh !important;
+  width: 100vw !important;
 }
 
 .burger__bars {
   border: 0;
   outline: 0;
   background: none;
-  color: $c-red;
+  color: $c-test;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -16,7 +20,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
-  background: $c-test;
+  background: $c-electric-blue;
   color: $c-deep-black;
   overflow: auto;
 
@@ -30,8 +34,8 @@
 
   &-item {
     margin-bottom: $m-gutter;
-    color: $c-red;
-    font-size: 2rem;
+    color: $c-test;
+    font-size: 1.4rem;
   }
 
   &-username {

@@ -1,5 +1,4 @@
 .btn {
-  padding: $m-gutter / 2;
   transition: background-color 0.2s ease;
   border: 0;
   border-radius: $br-1;
@@ -8,10 +7,33 @@
   text-align: center;
   cursor: pointer;
 
-  &__grid {
+  &__topgrid {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+    justify-content: flex-start;
+    margin-bottom: $m-gutter;
+
+    &-item {
+      margin-right: $m-gutter;
+      padding: ($m-gutter / 4) ($m-gutter / 2);
+      background-color: $c-pale-white;
+      color: $c-test;
+    }
+  }
+
+  &__bottomgrid {
+      display: flex;
+      justify-content: flex-end;
+
+      &-item {
+        min-width: 7rem;
+        padding: ($m-gutter / 4) ($m-gutter / 2);
+        margin-left: $m-gutter;
+
+        &-clip-text {
+        background: url('../../photos/Silver-Tarp-glitched-4-20-2017-11-45-14-PM copy.png') no-repeat center center fixed !important;
+        background-clip: text;
+        }
+      }
 
     &-search {
       margin-bottom: $m-gutter;
@@ -30,37 +52,38 @@
     color: $c-pale-white;
 
     &:hover {
-      background: lighten($c-blue, 5%);
-      color: lighten($c-pale-white, 5%);
+      background: lighten($c-red, 5%);
+      color: $c-pink;
     }
 
     &.active {
-      background: $c-pale-white;
+      background: $c-test;
       color: $c-blue;
     }
   }
 
   &-form {
     display: inline-block;
-    flex-basis: calc(100% / 3);
-    background: $c-red;
-    color: $c-test;
+    // flex-basis: calc(100% / 3);
+    background: $c-test;
+    // color: lighten($c-pink, 10%);
+    color: $c-electric-blue;
 
     &:hover {
-      background-color: lighten($c-blue, 5%);
-      color: lighten($c-pale-white, 5%);
+      background-color: lighten($c-test, 5%);
+      color: lighten($c-electric-blue, 15%);
       box-shadow: $bs-2;
     }
 
     &:focus {
-      background-color: lighten($c-blue, 5%);
-      color: lighten($c-pale-white, 5%);
+      background-color: lighten($c-test, 5%);
+      color: $c-pink;
       box-shadow: $bs-2;
     }
 
     &:active {
-      background-color: $c-blue;
-      color: $c-pale-white;
+      background-color: lighten($c-test, 15%);
+      color: lighten($c-pale-white, 100%);
       box-shadow: none;
     }
   }
@@ -102,13 +125,13 @@
 
     &:hover {
       background-color: lighten($c-blue, 5%);
-      color: lighten($c-pale-white, 5%);
+      color: $c-pink;
       box-shadow: $bs-2;
     }
 
     &:focus {
       background-color: lighten($c-blue, 5%);
-      color: lighten($c-pale-white, 5%);
+      color: $c-pink;
       box-shadow: $bs-2;
     }
 

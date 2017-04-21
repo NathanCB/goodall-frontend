@@ -1,17 +1,18 @@
 <div class="section">
   <div class="container">
-    <h2 class="form__heading">Login</h2>
 
     <div class="form-container">
-      {{#link-to "register" class="form__sub-heading"}}Don't have an account? Sign up here.{{/link-to}}
+      <div class="btn__topgrid">
+      {{#link-to "register" class="btn btn__topgrid-item"}}Don't have an account? <span class="change-color"> Sign up here.</span>{{/link-to}}
+      </div>
       {{#with (changeset model validator) as |changeset|}}
 
       <form {{action "authenticate" changeset on="submit"}}>
         {{validated-input placeholder="Username" changeset=changeset propertyName="username"}}
         {{validated-input placeholder="Password" changeset=changeset propertyName="password" type="password"}}
-        <div class="btn__grid">
-          {{#link-to 'event' class="btn btn-form"}}Back{{/link-to}}
-          <button type="submit" name="Go" class="btn btn-form">Go!</button>
+        <div class="btn__bottomgrid">
+          {{#link-to 'event' class="btn btn__bottomgrid-item btn-form"}}Back{{/link-to}}
+          <button type="submit" name="Go" class="btn btn__bottomgrid-item btn-form">Login</button>
         </div>
       </form>
       {{/with}}

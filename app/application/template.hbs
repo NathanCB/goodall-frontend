@@ -3,7 +3,7 @@
     <ul class="sidebar-content">
 
       {{#menu.item}}
-        {{#link-to 'event'}}<img src="../photos/DIY Logo.png" class="bm-menu-logo" alt="logo">{{/link-to}}
+        {{#link-to 'event'}}<img src="../photos/goodalllogo.png" class="bm-menu-logo" alt="logo">{{/link-to}}
       {{/menu.item}}
 
             {{#menu.item}}
@@ -13,7 +13,7 @@
             {{#link-to 'register'}}Create Account{{/link-to}}
           {{/if}}
           {{/menu.item}}
-    
+
           {{#menu.item}}
             {{#if session.isAuthenticated}}
               <a href="#" {{action 'invalidateSession'}}>Logout</a>
