@@ -68,32 +68,30 @@
     }
 
     &.active {
-      background: $c-test;
-      color: $c-blue;
+      // background: $c-test;
+      // color: $c-blue;
     }
   }
 
   &-form {
     display: inline-block;
-    // flex-basis: calc(100% / 3);
-    background: $c-test;
-    // color: lighten($c-pink, 10%);
+    border: 1px $c-electric-blue solid;
+    border-radius: 2dp;
+    background: $c-deep-black;
     color: $c-electric-blue;
 
     &:hover {
-      background-color: lighten($c-test, 5%);
-      color: lighten($c-electric-blue, 15%);
+      background: lighten($c-deep-black, 5%);
+      border: 1px lighten($c-electric-blue, 5%) solid;
       box-shadow: $bs-2;
+      color: lighten($c-electric-blue, 5%);
     }
 
     &:focus {
-      background-color: lighten($c-test, 5%);
-      color: $c-pink;
       box-shadow: $bs-2;
     }
 
     &:active {
-      background-color: lighten($c-test, 15%);
       color: lighten($c-pale-white, 100%);
       box-shadow: none;
     }

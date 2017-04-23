@@ -1,6 +1,6 @@
 .bm-content {
-  // background: $c-test !important;
-  background: url('../../photos/Silver-Tarp-glitched-4-20-2017-11-45-14-PM copy.png') no-repeat center center fixed !important;
+  background: $c-deep-black !important;
+  // background: url('../../photos/Silver-Tarp-glitched-4-20-2017-11-45-14-PM copy.png') no-repeat center center fixed !important;
   // object-fit: fill !important;
   height: 100vh !important;
   width: 100vw !important;
@@ -10,7 +10,7 @@
   border: 0;
   outline: 0;
   background: none;
-  color: $c-test;
+  color: $c-electric-blue;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -34,11 +34,10 @@
 
   &-item {
     margin-bottom: $m-gutter;
-    color: $c-test;
     font-size: 1.4rem;
   }
 
   &-username {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
